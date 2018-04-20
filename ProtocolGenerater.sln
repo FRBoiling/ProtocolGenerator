@@ -15,6 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java", "Java", "{C16E2D6F-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proto", "Proto", "{4705E38B-98AE-4DE6-8BCD-BAEC717FB02C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{B7ADC375-420F-42D4-B7C2-EDF2616F6B66}"
+	ProjectSection(SolutionItems) = preProject
+		Bin\protobuf-net.dll = Bin\protobuf-net.dll
+		Bin\protobuf-net.Reflection.dll = Bin\protobuf-net.Reflection.dll
+		Bin\protoc.exe = Bin\protoc.exe
+		Bin\ProtocolGenerater.exe = Bin\ProtocolGenerater.exe
+		Bin\protogen.exe = Bin\protogen.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
