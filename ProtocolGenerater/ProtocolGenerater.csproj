@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\AbstractFileModel.cs" />
+    <Compile Include="Core\CSharp\CSharpClass_IdGenerater.cs" />
+    <Compile Include="Core\CSharp\CSharpClass_Id.cs" />
+    <Compile Include="Core\CSharp\CSharpClass_Proto.cs" />
+    <Compile Include="Core\CSharp\CSharpCodeGenerater.cs" />
+    <Compile Include="Core\CSharp\CSharpGenerater.cs" />
+    <Compile Include="Core\EnumType.cs" />
+    <Compile Include="Utils\FileUtil.cs" />
+    <Compile Include="Core\ICodeGenerater.cs" />
+    <Compile Include="Core\Data\Data.cs" />
+    <Compile Include="Core\Data\DataManager.cs" />
+    <Compile Include="Core\Data\DataParser.cs" />
+    <Compile Include="Core\GeneraterManager.cs" />
+    <Compile Include="Core\IGenerater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\ProtoBuf\ProtoGenerater.cs" />
+    <Compile Include="Core\ProtoBuf\ProtoFileGenerater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Java\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

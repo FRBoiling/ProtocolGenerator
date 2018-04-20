@@ -1,0 +1,20 @@
+package Protocol.Gate.Client;
+
+message G2CTest1 
+{
+	required int32 testint1 = 1;
+	required string teststring1 = 2;
+}
+
+message G2CTest2 
+{
+	required int32 testint2 = 1;
+	required string teststring2 = 2;
+}
+
+message G2CTest3 
+{
+	required int32 testint3 = 1;
+	required string teststring3 = 2;
+}
+
