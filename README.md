@@ -53,7 +53,10 @@ A2BTest为协议名msgName， 0xff00001为协议编号msgId，testInt为int32类
 大致使用方式：
 ----------------------------------------
 具体协议管理项目如子目录protoforclient项目，.code文件内写入如上面的描述模型，可以写入多个，达到统一管理协议和协议编号的目的。
-然后生成protoclient项目，就会在protocol文件夹下找到生成好的相应语言的文件
+
+然后生成protoclient项目，就会在protocol文件夹下找到生成好的相应语言的文件。
+
+目前只实现了c# 和 java 的生成。
 
 
 
