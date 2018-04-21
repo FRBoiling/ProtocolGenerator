@@ -34,7 +34,7 @@ length + msgId + msgData
 ```
 length为short型的数据长度，msgId为int32的协议编号，msgData为标准protobuf数据。
 
-其中，msgId和msgValue的描述模型，是写在.code后缀的文件中的。具体格式如下：
+其中，msgId和msgData的描述模型，是以如下格式写在.code后缀的文件中的：
 ```c
 message A2BTest 0xff00001
 {
