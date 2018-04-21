@@ -1,3 +1,4 @@
+syntax="proto2";
 package Protocol.Gate.Client;
 
 message G2CTest1 

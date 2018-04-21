@@ -1,3 +1,4 @@
+syntax="proto2";
 package Protocol.Client.Gate;
 
 message C2GTest1 0x1200001

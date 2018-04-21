@@ -10,16 +10,15 @@
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
-using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProtocolGenerater.CSharp
+namespace ProtocolGenerater.Core.CSharp
 {
     public class CSharpClass_IdGenerater: AbstractFileModel
     {
         CSharpCodeGenerater _generater = new CSharpCodeGenerater();
-        string className = "IdGen";
+        string className = "IdGenerater";
         Data _data = null;
         public CSharpClass_IdGenerater(Data data)
         {
@@ -28,14 +27,13 @@ namespace ProtocolGenerater.CSharp
             m_filePath = Program.OutputPath + @"CSharp\"+ tempPath+@"\";
             m_fileName = _data.ProtoFileKey;
             m_fileSuffix = "IdGenerater.cs";
-            
         }
 
         private StringBuilder GenerateIdKey(string key)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(CSharpClass_Id.msgIdPackageName);
-            sb.Append("Id<");
+            sb.Append(".Id<");
             sb.Append(key);
             sb.Append(">.Value=");
             return sb;
@@ -52,7 +50,7 @@ namespace ProtocolGenerater.CSharp
         {
             StringBuilder fileContent = new StringBuilder();
             StringBuilder fileComments = _generater.ClassCommentsFrame();
-            StringBuilder fileIncludeHeads = _generater.IncludeHeadFrame();
+            StringBuilder fileIncludeHeads = _generater.IncludeHeadFrame(null);
 
             List<StringBuilder> attrs = new List<StringBuilder>();
             foreach (var item in _data.DicName2Id)

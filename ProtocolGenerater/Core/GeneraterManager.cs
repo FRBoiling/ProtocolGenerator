@@ -11,7 +11,8 @@
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
 using ProtocolGenerater.Core;
-using ProtocolGenerater.CSharp;
+using ProtocolGenerater.Core.CSharp;
+using ProtocolGenerater.Core.Java;
 using ProtocolGenerater.ProtoBuf;
 using System.Collections.Generic;
 
@@ -41,23 +42,19 @@ namespace ProtocolGenerater
                 case "all":
                     Add(GeneraterType.Proto,new ProtoGenerater());
                     Add(GeneraterType.CSharp, new CSharpGenerater());
-                    //Add(GeneraterType.Java, new CSharpGenerater());
+                    Add(GeneraterType.Java, new JavaGenerater());
                     //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
                     break;
                 case "default":
                     Add(GeneraterType.Proto,new ProtoGenerater());
                     Add(GeneraterType.CSharp, new CSharpGenerater());
-                    //Add(GeneraterType.Java, new CSharpGenerater());
+                    Add(GeneraterType.Java, new JavaGenerater());
                     //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
                     break;
                 case "id":
                     Add(GeneraterType.CSharp, new CSharpGenerater());
-                    //Add(GeneraterType.Java, new CSharpGenerater());
+                    Add(GeneraterType.Java, new JavaGenerater());
                     break;
-                //case "2":
-                //    Add(GeneraterType.CSharp, new CSharpGenerater());
-                //    Add(GeneraterType.CPlusPlus,new CSharpGenerater());
-                //    break;
                 default:
                     break;
             }

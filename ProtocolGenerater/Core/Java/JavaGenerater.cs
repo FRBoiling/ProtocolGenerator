@@ -5,26 +5,26 @@
  * 版 本 号 :  v1.0.0.0  
  * 说    明 :      
  * 作    者 :  FReedom 
- * 创建时间 :  2018/4/20 星期五 19:28:28 
- * 更新时间 :  2018/4/20 星期五 19:28:28 
+ * 创建时间 :  2018/4/21 星期五 12:28:28 
+ * 更新时间 :  2018/4/21 星期五 12:28:28 
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
 
-namespace ProtocolGenerater.Core.CSharp
+namespace ProtocolGenerater.Core.Java
 {
-    public class CSharpGenerater : IGenerater
+    public class JavaGenerater : IGenerater
     {
         public void Generate()
         {
-            CSharpClass_Id classGen = new CSharpClass_Id();
+            JavaClass_Id classGen = new JavaClass_Id();
             classGen.Generate();
         }
         public void Generate(Data data)
         {
-            CSharpClass_IdGenerater classGen = new CSharpClass_IdGenerater(data);
+            JavaClass_IdGenerater classGen = new JavaClass_IdGenerater(data);
             classGen.Generate();
-            CSharpClass_Proto protoGen = new CSharpClass_Proto(data);
+            JavaClass_Proto protoGen = new JavaClass_Proto(data);
             protoGen.GenerateProto();
         }
     }

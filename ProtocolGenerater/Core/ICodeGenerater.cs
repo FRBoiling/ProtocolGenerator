@@ -31,7 +31,7 @@ namespace ProtocolGenerater
         /// 包含头文件框架
         /// </summary>
         /// <returns></returns>
-        StringBuilder IncludeHeadFrame();
+        StringBuilder IncludeHeadFrame(List<string> includes);
         /// <summary>
         /// 函数框架
         /// </summary>

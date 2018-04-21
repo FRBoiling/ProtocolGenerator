@@ -10,6 +10,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protocol", "Protocol", "{08FAF6C1-1A85-4DB1-B018-3706E128F603}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{FAAD74BD-88AA-4FA0-BEDE-E9E389FA3BC5}"
+	ProjectSection(SolutionItems) = preProject
+		Protocol\CSharp\Protocol\Client\Gate\C2GIdGenerater.cs = Protocol\CSharp\Protocol\Client\Gate\C2GIdGenerater.cs
+		Protocol\CSharp\Id.cs = Protocol\CSharp\Id.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java", "Java", "{C16E2D6F-32F3-4B61-854E-4547D159F5CE}"
 EndProject

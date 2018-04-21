@@ -10,14 +10,10 @@
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ProtocolGenerater.CSharp
+namespace ProtocolGenerater.Core.CSharp
 {
     class CSharpClass_Id:AbstractFileModel
     {
@@ -27,7 +23,8 @@ namespace ProtocolGenerater.CSharp
 
         public CSharpClass_Id()
         {
-            m_filePath = Program.OutputPath + @"CSharp\";
+            string tempPath = msgIdPackageName.Replace('.', '\\');
+            m_filePath = Program.OutputPath + @"CSharp\"+ tempPath+@"\";
             m_fileName = "Id";
             m_fileSuffix = ".cs";
         }
@@ -36,7 +33,7 @@ namespace ProtocolGenerater.CSharp
         {
             StringBuilder fileContent = new StringBuilder();
             StringBuilder fileComments = _generater.ClassCommentsFrame();
-            StringBuilder fileIncludeHeads = _generater.IncludeHeadFrame();
+            StringBuilder fileIncludeHeads = _generater.IncludeHeadFrame(null);
             StringBuilder classAttr = _generater.AttrFrame("public static uint", "Value");
             List<StringBuilder> attrs = new List<StringBuilder>();
             attrs.Add(classAttr);

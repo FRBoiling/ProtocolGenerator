@@ -50,6 +50,11 @@
     <Compile Include="Core\CSharp\CSharpCodeGenerater.cs" />
     <Compile Include="Core\CSharp\CSharpGenerater.cs" />
     <Compile Include="Core\EnumType.cs" />
+    <Compile Include="Core\Java\JavaClass_IdGenerater.cs" />
+    <Compile Include="Core\Java\JavaClass_Proto.cs" />
+    <Compile Include="Core\Java\JavaGenerater.cs" />
+    <Compile Include="Core\Java\JavaClass_Id.cs" />
+    <Compile Include="Core\Java\JavaCodeGenerater.cs" />
     <Compile Include="Utils\FileUtil.cs" />
     <Compile Include="Core\ICodeGenerater.cs" />
     <Compile Include="Core\Data\Data.cs" />
@@ -65,8 +70,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\Java\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,13 +6,13 @@
  //------------------------------------------------------------------------------
 namespace Protocol.Gate.Client
 {
-     public class IdGen
+     public class IdGenerater
      {
           public static void GenerateId()
           {
-               Protocol.MsgIdId<G2CTest1>.Value= 0x2100001;
-               Protocol.MsgIdId<G2CTest2>.Value= 0x2100002;
-               Protocol.MsgIdId<G2CTest3>.Value= 0x2100003;
+               Protocol.MsgId.Id<G2CTest1>.Value= 0x2100001;
+               Protocol.MsgId.Id<G2CTest2>.Value= 0x2100002;
+               Protocol.MsgId.Id<G2CTest3>.Value= 0x2100003;
           }
      }
 }

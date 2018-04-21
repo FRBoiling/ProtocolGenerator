@@ -32,8 +32,8 @@ namespace ProtocolGenerater
             StringBuilder fileContent = GenerateClassCode();
             if (FileUtil.WriteToFile(fileContent, m_filePath, m_fileName, m_fileSuffix))
             {
-                Console.WriteLine("{0} generate sucess", FileSimpleName);
-                Console.WriteLine(">>{0}", FileFullName);
+                //Console.WriteLine("{0} generate sucess", FileSimpleName);
+                //Console.WriteLine(">>{0}", FileFullName);
                 return true;
             }
             else
