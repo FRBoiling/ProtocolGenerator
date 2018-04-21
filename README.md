@@ -22,14 +22,11 @@ protobuf 自动批量生成方案（2018/04/20）
 
 我自定义的协议格式为，一个int32的协议编号，加protobuf数据。大致通过如下格式来描述：
 
-message A2BTest 0xff00001
-
-{
-
+	message A2BTest 0xff00001
+	{
 	  required int32 testint = 1;
 	  required string teststring = 2;
-
-}
+	}
 
 其中， A2BTest为协议名， 0xff00001为协议编号，testint为int32类型字段，teststring为string类型字段
 
