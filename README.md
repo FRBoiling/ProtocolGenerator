@@ -22,23 +22,39 @@ protobuf批量管理自动生成方案（2018/04/20）
 
 具体需求和实现思路
 --------------------------------------
-我自定义的协议格式为，一个int32的协议编号，加protobuf数据。大致通过如下格式来描述：
+我定义的协议格式为：
+```c
+length + msgId + msgData
+```
+length为short型的数据长度，msgId为int32的协议编号，msgData为标准protobuf数据。
 
-	message A2BTest 0xff00001
-	{
-	  required int32 testint = 1;
-	  required string teststring = 2;
-	}
+其中，msgId和msgValue的描述模型，是写在.code后缀的文件中的。具体格式如下：
+```c
+message A2BTest 0xff00001
+{
+	required int32 testInt = 1;
+	required string testString = 2;
+}
+```
+A2BTest为协议名msgName， 0xff00001为协议编号msgId，testInt为int32类型字段，testString为string类型字段
 
-其中， A2BTest为协议名， 0xff00001为协议编号，testint为int32类型字段，teststring为string类型字段
+可以看出，这个模型是在标准proto结构的msgName后面加了一个msgId ，形成列一个新的协议描述模型，
 
-可以看出，这个描述比标准proto结构只多了一个协议编号（0xff00001）这样的一个数据。
+我这里做的就是:
+---------------------------------------------
+	1 将这个模型，拆分成msgId和标准的proto协议
 
-我这里做的就是，将这个描述，拆分，并生成标准的proto协议，和相应语言的协议名称、协议编号的键值对。
+	2 通过标准的proto协议，生成对应语言的protobuf协议代码。
 
-并通过编译构建项目，实现批量完成上述操作。
+	3 生成相应语言的msgId与msgName之间的映射
 
-最终，实现通过协议编号来识别对应的proto协议的目的。
+实现批量完成上述操作。
+
+大致使用方式：
+----------------------------------------
+具体协议管理项目如子目录protoforclient项目，.code文件内写入如上面的描述模型，可以写入多个，达到统一管理协议和协议编号的目的。
+然后生成protoclient项目，就会在protocol文件夹下找到生成好的相应语言的文件
+
 
 
 
