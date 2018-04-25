@@ -40,6 +40,30 @@ public final class C2G {
      */
     com.google.protobuf.ByteString
         getTeststring1Bytes();
+
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    java.util.List<Protocol.Client.Gate.C2G.C2GTest2> 
+        getC2GTest2ListList();
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    Protocol.Client.Gate.C2G.C2GTest2 getC2GTest2List(int index);
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    int getC2GTest2ListCount();
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    java.util.List<? extends Protocol.Client.Gate.C2G.C2GTest2OrBuilder> 
+        getC2GTest2ListOrBuilderList();
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    Protocol.Client.Gate.C2G.C2GTest2OrBuilder getC2GTest2ListOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Protocol.Client.Gate.C2GTest1}
@@ -56,6 +80,7 @@ public final class C2G {
     private C2GTest1() {
       testint1_ = 0;
       teststring1_ = "";
+      c2GTest2List_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -100,6 +125,15 @@ public final class C2G {
               teststring1_ = bs;
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                c2GTest2List_ = new java.util.ArrayList<Protocol.Client.Gate.C2G.C2GTest2>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              c2GTest2List_.add(
+                  input.readMessage(Protocol.Client.Gate.C2G.C2GTest2.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -108,6 +142,9 @@ public final class C2G {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          c2GTest2List_ = java.util.Collections.unmodifiableList(c2GTest2List_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -182,6 +219,41 @@ public final class C2G {
       }
     }
 
+    public static final int C2GTEST2LIST_FIELD_NUMBER = 3;
+    private java.util.List<Protocol.Client.Gate.C2G.C2GTest2> c2GTest2List_;
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    public java.util.List<Protocol.Client.Gate.C2G.C2GTest2> getC2GTest2ListList() {
+      return c2GTest2List_;
+    }
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    public java.util.List<? extends Protocol.Client.Gate.C2G.C2GTest2OrBuilder> 
+        getC2GTest2ListOrBuilderList() {
+      return c2GTest2List_;
+    }
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    public int getC2GTest2ListCount() {
+      return c2GTest2List_.size();
+    }
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    public Protocol.Client.Gate.C2G.C2GTest2 getC2GTest2List(int index) {
+      return c2GTest2List_.get(index);
+    }
+    /**
+     * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+     */
+    public Protocol.Client.Gate.C2G.C2GTest2OrBuilder getC2GTest2ListOrBuilder(
+        int index) {
+      return c2GTest2List_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -196,6 +268,12 @@ public final class C2G {
         memoizedIsInitialized = 0;
         return false;
       }
+      for (int i = 0; i < getC2GTest2ListCount(); i++) {
+        if (!getC2GTest2List(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -207,6 +285,9 @@ public final class C2G {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, teststring1_);
+      }
+      for (int i = 0; i < c2GTest2List_.size(); i++) {
+        output.writeMessage(3, c2GTest2List_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -222,6 +303,10 @@ public final class C2G {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, teststring1_);
+      }
+      for (int i = 0; i < c2GTest2List_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, c2GTest2List_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -249,6 +334,8 @@ public final class C2G {
         result = result && getTeststring1()
             .equals(other.getTeststring1());
       }
+      result = result && getC2GTest2ListList()
+          .equals(other.getC2GTest2ListList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -267,6 +354,10 @@ public final class C2G {
       if (hasTeststring1()) {
         hash = (37 * hash) + TESTSTRING1_FIELD_NUMBER;
         hash = (53 * hash) + getTeststring1().hashCode();
+      }
+      if (getC2GTest2ListCount() > 0) {
+        hash = (37 * hash) + C2GTEST2LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getC2GTest2ListList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -393,6 +484,7 @@ public final class C2G {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getC2GTest2ListFieldBuilder();
         }
       }
       public Builder clear() {
@@ -401,6 +493,12 @@ public final class C2G {
         bitField0_ = (bitField0_ & ~0x00000001);
         teststring1_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (c2GTest2ListBuilder_ == null) {
+          c2GTest2List_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          c2GTest2ListBuilder_.clear();
+        }
         return this;
       }
 
@@ -433,6 +531,15 @@ public final class C2G {
           to_bitField0_ |= 0x00000002;
         }
         result.teststring1_ = teststring1_;
+        if (c2GTest2ListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            c2GTest2List_ = java.util.Collections.unmodifiableList(c2GTest2List_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.c2GTest2List_ = c2GTest2List_;
+        } else {
+          result.c2GTest2List_ = c2GTest2ListBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -483,6 +590,32 @@ public final class C2G {
           teststring1_ = other.teststring1_;
           onChanged();
         }
+        if (c2GTest2ListBuilder_ == null) {
+          if (!other.c2GTest2List_.isEmpty()) {
+            if (c2GTest2List_.isEmpty()) {
+              c2GTest2List_ = other.c2GTest2List_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureC2GTest2ListIsMutable();
+              c2GTest2List_.addAll(other.c2GTest2List_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.c2GTest2List_.isEmpty()) {
+            if (c2GTest2ListBuilder_.isEmpty()) {
+              c2GTest2ListBuilder_.dispose();
+              c2GTest2ListBuilder_ = null;
+              c2GTest2List_ = other.c2GTest2List_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              c2GTest2ListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getC2GTest2ListFieldBuilder() : null;
+            } else {
+              c2GTest2ListBuilder_.addAllMessages(other.c2GTest2List_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -494,6 +627,11 @@ public final class C2G {
         }
         if (!hasTeststring1()) {
           return false;
+        }
+        for (int i = 0; i < getC2GTest2ListCount(); i++) {
+          if (!getC2GTest2List(i).isInitialized()) {
+            return false;
+          }
         }
         return true;
       }
@@ -624,6 +762,246 @@ public final class C2G {
         onChanged();
         return this;
       }
+
+      private java.util.List<Protocol.Client.Gate.C2G.C2GTest2> c2GTest2List_ =
+        java.util.Collections.emptyList();
+      private void ensureC2GTest2ListIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          c2GTest2List_ = new java.util.ArrayList<Protocol.Client.Gate.C2G.C2GTest2>(c2GTest2List_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          Protocol.Client.Gate.C2G.C2GTest2, Protocol.Client.Gate.C2G.C2GTest2.Builder, Protocol.Client.Gate.C2G.C2GTest2OrBuilder> c2GTest2ListBuilder_;
+
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public java.util.List<Protocol.Client.Gate.C2G.C2GTest2> getC2GTest2ListList() {
+        if (c2GTest2ListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(c2GTest2List_);
+        } else {
+          return c2GTest2ListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public int getC2GTest2ListCount() {
+        if (c2GTest2ListBuilder_ == null) {
+          return c2GTest2List_.size();
+        } else {
+          return c2GTest2ListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Protocol.Client.Gate.C2G.C2GTest2 getC2GTest2List(int index) {
+        if (c2GTest2ListBuilder_ == null) {
+          return c2GTest2List_.get(index);
+        } else {
+          return c2GTest2ListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder setC2GTest2List(
+          int index, Protocol.Client.Gate.C2G.C2GTest2 value) {
+        if (c2GTest2ListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.set(index, value);
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder setC2GTest2List(
+          int index, Protocol.Client.Gate.C2G.C2GTest2.Builder builderForValue) {
+        if (c2GTest2ListBuilder_ == null) {
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder addC2GTest2List(Protocol.Client.Gate.C2G.C2GTest2 value) {
+        if (c2GTest2ListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.add(value);
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder addC2GTest2List(
+          int index, Protocol.Client.Gate.C2G.C2GTest2 value) {
+        if (c2GTest2ListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.add(index, value);
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder addC2GTest2List(
+          Protocol.Client.Gate.C2G.C2GTest2.Builder builderForValue) {
+        if (c2GTest2ListBuilder_ == null) {
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.add(builderForValue.build());
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder addC2GTest2List(
+          int index, Protocol.Client.Gate.C2G.C2GTest2.Builder builderForValue) {
+        if (c2GTest2ListBuilder_ == null) {
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder addAllC2GTest2List(
+          java.lang.Iterable<? extends Protocol.Client.Gate.C2G.C2GTest2> values) {
+        if (c2GTest2ListBuilder_ == null) {
+          ensureC2GTest2ListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, c2GTest2List_);
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder clearC2GTest2List() {
+        if (c2GTest2ListBuilder_ == null) {
+          c2GTest2List_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Builder removeC2GTest2List(int index) {
+        if (c2GTest2ListBuilder_ == null) {
+          ensureC2GTest2ListIsMutable();
+          c2GTest2List_.remove(index);
+          onChanged();
+        } else {
+          c2GTest2ListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Protocol.Client.Gate.C2G.C2GTest2.Builder getC2GTest2ListBuilder(
+          int index) {
+        return getC2GTest2ListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Protocol.Client.Gate.C2G.C2GTest2OrBuilder getC2GTest2ListOrBuilder(
+          int index) {
+        if (c2GTest2ListBuilder_ == null) {
+          return c2GTest2List_.get(index);  } else {
+          return c2GTest2ListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public java.util.List<? extends Protocol.Client.Gate.C2G.C2GTest2OrBuilder> 
+           getC2GTest2ListOrBuilderList() {
+        if (c2GTest2ListBuilder_ != null) {
+          return c2GTest2ListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(c2GTest2List_);
+        }
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Protocol.Client.Gate.C2G.C2GTest2.Builder addC2GTest2ListBuilder() {
+        return getC2GTest2ListFieldBuilder().addBuilder(
+            Protocol.Client.Gate.C2G.C2GTest2.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public Protocol.Client.Gate.C2G.C2GTest2.Builder addC2GTest2ListBuilder(
+          int index) {
+        return getC2GTest2ListFieldBuilder().addBuilder(
+            index, Protocol.Client.Gate.C2G.C2GTest2.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Protocol.Client.Gate.C2GTest2 c2gTest2List = 3;</code>
+       */
+      public java.util.List<Protocol.Client.Gate.C2G.C2GTest2.Builder> 
+           getC2GTest2ListBuilderList() {
+        return getC2GTest2ListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          Protocol.Client.Gate.C2G.C2GTest2, Protocol.Client.Gate.C2G.C2GTest2.Builder, Protocol.Client.Gate.C2G.C2GTest2OrBuilder> 
+          getC2GTest2ListFieldBuilder() {
+        if (c2GTest2ListBuilder_ == null) {
+          c2GTest2ListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              Protocol.Client.Gate.C2G.C2GTest2, Protocol.Client.Gate.C2G.C2GTest2.Builder, Protocol.Client.Gate.C2G.C2GTest2OrBuilder>(
+                  c2GTest2List_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          c2GTest2List_ = null;
+        }
+        return c2GTest2ListBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
@@ -678,27 +1056,22 @@ public final class C2G {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int32 testint2 = 1;</code>
+     * <code>required int32 testint1 = 1;</code>
+     */
+    boolean hasTestint1();
+    /**
+     * <code>required int32 testint1 = 1;</code>
+     */
+    int getTestint1();
+
+    /**
+     * <code>required int32 testint2 = 2;</code>
      */
     boolean hasTestint2();
     /**
-     * <code>required int32 testint2 = 1;</code>
+     * <code>required int32 testint2 = 2;</code>
      */
     int getTestint2();
-
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    boolean hasTeststring2();
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    java.lang.String getTeststring2();
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getTeststring2Bytes();
   }
   /**
    * Protobuf type {@code Protocol.Client.Gate.C2GTest2}
@@ -713,8 +1086,8 @@ public final class C2G {
       super(builder);
     }
     private C2GTest2() {
+      testint1_ = 0;
       testint2_ = 0;
-      teststring2_ = "";
     }
 
     @java.lang.Override
@@ -750,13 +1123,12 @@ public final class C2G {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              testint2_ = input.readInt32();
+              testint1_ = input.readInt32();
               break;
             }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 16: {
               bitField0_ |= 0x00000002;
-              teststring2_ = bs;
+              testint2_ = input.readInt32();
               break;
             }
           }
@@ -784,61 +1156,34 @@ public final class C2G {
     }
 
     private int bitField0_;
-    public static final int TESTINT2_FIELD_NUMBER = 1;
-    private int testint2_;
+    public static final int TESTINT1_FIELD_NUMBER = 1;
+    private int testint1_;
     /**
-     * <code>required int32 testint2 = 1;</code>
+     * <code>required int32 testint1 = 1;</code>
      */
-    public boolean hasTestint2() {
+    public boolean hasTestint1() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 testint2 = 1;</code>
+     * <code>required int32 testint1 = 1;</code>
      */
-    public int getTestint2() {
-      return testint2_;
+    public int getTestint1() {
+      return testint1_;
     }
 
-    public static final int TESTSTRING2_FIELD_NUMBER = 2;
-    private volatile java.lang.Object teststring2_;
+    public static final int TESTINT2_FIELD_NUMBER = 2;
+    private int testint2_;
     /**
-     * <code>required string teststring2 = 2;</code>
+     * <code>required int32 testint2 = 2;</code>
      */
-    public boolean hasTeststring2() {
+    public boolean hasTestint2() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string teststring2 = 2;</code>
+     * <code>required int32 testint2 = 2;</code>
      */
-    public java.lang.String getTeststring2() {
-      java.lang.Object ref = teststring2_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          teststring2_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTeststring2Bytes() {
-      java.lang.Object ref = teststring2_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        teststring2_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getTestint2() {
+      return testint2_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -847,11 +1192,11 @@ public final class C2G {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasTestint2()) {
+      if (!hasTestint1()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasTeststring2()) {
+      if (!hasTestint2()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -862,10 +1207,10 @@ public final class C2G {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, testint2_);
+        output.writeInt32(1, testint1_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, teststring2_);
+        output.writeInt32(2, testint2_);
       }
       unknownFields.writeTo(output);
     }
@@ -877,10 +1222,11 @@ public final class C2G {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, testint2_);
+          .computeInt32Size(1, testint1_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, teststring2_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, testint2_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -898,15 +1244,15 @@ public final class C2G {
       Protocol.Client.Gate.C2G.C2GTest2 other = (Protocol.Client.Gate.C2G.C2GTest2) obj;
 
       boolean result = true;
+      result = result && (hasTestint1() == other.hasTestint1());
+      if (hasTestint1()) {
+        result = result && (getTestint1()
+            == other.getTestint1());
+      }
       result = result && (hasTestint2() == other.hasTestint2());
       if (hasTestint2()) {
         result = result && (getTestint2()
             == other.getTestint2());
-      }
-      result = result && (hasTeststring2() == other.hasTeststring2());
-      if (hasTeststring2()) {
-        result = result && getTeststring2()
-            .equals(other.getTeststring2());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -919,13 +1265,13 @@ public final class C2G {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTestint1()) {
+        hash = (37 * hash) + TESTINT1_FIELD_NUMBER;
+        hash = (53 * hash) + getTestint1();
+      }
       if (hasTestint2()) {
         hash = (37 * hash) + TESTINT2_FIELD_NUMBER;
         hash = (53 * hash) + getTestint2();
-      }
-      if (hasTeststring2()) {
-        hash = (37 * hash) + TESTSTRING2_FIELD_NUMBER;
-        hash = (53 * hash) + getTeststring2().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1056,9 +1402,9 @@ public final class C2G {
       }
       public Builder clear() {
         super.clear();
-        testint2_ = 0;
+        testint1_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        teststring2_ = "";
+        testint2_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -1087,11 +1433,11 @@ public final class C2G {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.testint2_ = testint2_;
+        result.testint1_ = testint1_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.teststring2_ = teststring2_;
+        result.testint2_ = testint2_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1134,13 +1480,11 @@ public final class C2G {
 
       public Builder mergeFrom(Protocol.Client.Gate.C2G.C2GTest2 other) {
         if (other == Protocol.Client.Gate.C2G.C2GTest2.getDefaultInstance()) return this;
+        if (other.hasTestint1()) {
+          setTestint1(other.getTestint1());
+        }
         if (other.hasTestint2()) {
           setTestint2(other.getTestint2());
-        }
-        if (other.hasTeststring2()) {
-          bitField0_ |= 0x00000002;
-          teststring2_ = other.teststring2_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1148,10 +1492,10 @@ public final class C2G {
       }
 
       public final boolean isInitialized() {
-        if (!hasTestint2()) {
+        if (!hasTestint1()) {
           return false;
         }
-        if (!hasTeststring2()) {
+        if (!hasTestint2()) {
           return false;
         }
         return true;
@@ -1176,110 +1520,66 @@ public final class C2G {
       }
       private int bitField0_;
 
-      private int testint2_ ;
+      private int testint1_ ;
       /**
-       * <code>required int32 testint2 = 1;</code>
+       * <code>required int32 testint1 = 1;</code>
        */
-      public boolean hasTestint2() {
+      public boolean hasTestint1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 testint2 = 1;</code>
+       * <code>required int32 testint1 = 1;</code>
+       */
+      public int getTestint1() {
+        return testint1_;
+      }
+      /**
+       * <code>required int32 testint1 = 1;</code>
+       */
+      public Builder setTestint1(int value) {
+        bitField0_ |= 0x00000001;
+        testint1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 testint1 = 1;</code>
+       */
+      public Builder clearTestint1() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        testint1_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int testint2_ ;
+      /**
+       * <code>required int32 testint2 = 2;</code>
+       */
+      public boolean hasTestint2() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 testint2 = 2;</code>
        */
       public int getTestint2() {
         return testint2_;
       }
       /**
-       * <code>required int32 testint2 = 1;</code>
+       * <code>required int32 testint2 = 2;</code>
        */
       public Builder setTestint2(int value) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         testint2_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 testint2 = 1;</code>
+       * <code>required int32 testint2 = 2;</code>
        */
       public Builder clearTestint2() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        testint2_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object teststring2_ = "";
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public boolean hasTeststring2() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public java.lang.String getTeststring2() {
-        java.lang.Object ref = teststring2_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            teststring2_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTeststring2Bytes() {
-        java.lang.Object ref = teststring2_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          teststring2_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public Builder setTeststring2(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        teststring2_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public Builder clearTeststring2() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        teststring2_ = getDefaultInstance().getTeststring2();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public Builder setTeststring2Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        teststring2_ = value;
+        testint2_ = 0;
         onChanged();
         return this;
       }
@@ -2015,11 +2315,12 @@ public final class C2G {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tC2G.proto\022\024Protocol.Client.Gate\"1\n\010C2G" +
+      "\n\tC2G.proto\022\024Protocol.Client.Gate\"g\n\010C2G" +
       "Test1\022\020\n\010testint1\030\001 \002(\005\022\023\n\013teststring1\030\002" +
-      " \002(\t\"1\n\010C2GTest2\022\020\n\010testint2\030\001 \002(\005\022\023\n\013te" +
-      "ststring2\030\002 \002(\t\"1\n\010C2GTest3\022\020\n\010testint3\030" +
-      "\001 \002(\005\022\023\n\013teststring3\030\002 \002(\t"
+      " \002(\t\0224\n\014c2gTest2List\030\003 \003(\0132\036.Protocol.Cl" +
+      "ient.Gate.C2GTest2\".\n\010C2GTest2\022\020\n\010testin" +
+      "t1\030\001 \002(\005\022\020\n\010testint2\030\002 \002(\005\"1\n\010C2GTest3\022\020" +
+      "\n\010testint3\030\001 \002(\005\022\023\n\013teststring3\030\002 \002(\t"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2038,13 +2339,13 @@ public final class C2G {
     internal_static_Protocol_Client_Gate_C2GTest1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Protocol_Client_Gate_C2GTest1_descriptor,
-        new java.lang.String[] { "Testint1", "Teststring1", });
+        new java.lang.String[] { "Testint1", "Teststring1", "C2GTest2List", });
     internal_static_Protocol_Client_Gate_C2GTest2_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Protocol_Client_Gate_C2GTest2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Protocol_Client_Gate_C2GTest2_descriptor,
-        new java.lang.String[] { "Testint2", "Teststring2", });
+        new java.lang.String[] { "Testint1", "Testint2", });
     internal_static_Protocol_Client_Gate_C2GTest3_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Protocol_Client_Gate_C2GTest3_fieldAccessorTable = new

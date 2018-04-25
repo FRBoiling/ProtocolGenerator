@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Client">
+      <UniqueIdentifier>{eee655ae-2696-49e9-9610-69bcda05b6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gate">
+      <UniqueIdentifier>{fb395c7a-9b48-4c31-b39e-6889721cc684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MsgId">
+      <UniqueIdentifier>{f1aac0ed-5eb6-4c4a-9c3d-83f261176e4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Client\C2G.code">
+      <Filter>Client</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MsgId\Id.code">
+      <Filter>MsgId</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Gate\G2C.code">
+      <Filter>Gate</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
