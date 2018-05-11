@@ -80,8 +80,8 @@ namespace ProtocolGenerater.Core.Java
             //    return clazzIdMap.put(msgClass, messageId);
             //}
             attrs = new List<StringBuilder>();
-            attrs.Add(_generater.AttrFrame("return", "clazzIdMap.put(msgClass, messageId)", 1));
-            classMethod = _generater.MethodFrame("int", "SetMessage(Class<? extends MessageLite> msgClass, int messageId)", attrs,1);
+            attrs.Add(_generater.AttrFrame("", "clazzIdMap.put(msgClass, messageId)", 1));
+            classMethod = _generater.MethodFrame("void", "SetMessage(Class<? extends MessageLite> msgClass, int messageId)", attrs,1);
 
             methods.Add(classMethod);
             return methods;

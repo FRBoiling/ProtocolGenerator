@@ -16,7 +16,7 @@ public class Id{
      public int getMessageId(Class<?> clazz){
           return clazzIdMap.get(clazz);
      }
-     public int SetMessage(Class<? extends MessageLite> msgClass, int messageId){
-          return clazzIdMap.put(msgClass, messageId);
+     public void SetMessage(Class<? extends MessageLite> msgClass, int messageId){
+           clazzIdMap.put(msgClass, messageId);
      }
 }
