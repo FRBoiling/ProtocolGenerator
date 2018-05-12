@@ -59,9 +59,9 @@ A2BTest为协议名msgName， 0xff00001为协议编号msgId，testInt为int32类
 大致使用方式：
 ----------------------------------------
 
-将如上 msgId和msgValue描述模型的协议写入protoclient项目中的.code文件。
+将如上 msgId和msgValue描述模型的协议写入ClientProtocolBuilder项目中的.code文件。
 
-一键生成protoclient项目
+一键生成ClientProtocolBuilder项目
 
 就会在protocol文件夹下找到生成好的相应语言的文件。
 
