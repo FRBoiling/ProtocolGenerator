@@ -64,5 +64,36 @@ namespace ProtocolGenerater
                 _dataDic.Add(data.ProtoFileKey, data);
             }
         }
+
+        public bool CheckFileChange(string fileFullName)
+        {
+            string filePath = @"Temp/";
+            string fileName = "";
+            string fileSuffix = ".tmp";
+            int index = fileFullName.LastIndexOf("\\");
+            if (index < 0)
+            {
+                Console.WriteLine("CheckFileChange error : fileFullName format wrong .({0})", fileFullName);
+                return false;
+            }
+
+            fileName = fileFullName.Substring(index + 1);
+            index = fileName.LastIndexOf(".");
+            fileName = fileName.Substring(0, index);
+
+            string newHashValue =FileUtil.GetFileHashValue(fileFullName);
+            if (string.IsNullOrEmpty(newHashValue))
+            {
+                Console.WriteLine("CheckFileChange error : {0} is null", fileFullName);
+                return false;
+            }
+            string oldHashValue = FileUtil.ReadFromFile(filePath, fileName, fileSuffix);
+            bool isChanged = !FileUtil.CompareHashValue(oldHashValue, newHashValue);
+            if (isChanged)
+            {
+                FileUtil.WriteToFile(newHashValue,filePath,fileName,fileSuffix);
+            }
+            return isChanged;
+        }
     }
 }

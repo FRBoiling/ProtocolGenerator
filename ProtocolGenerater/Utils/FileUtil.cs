@@ -51,6 +51,29 @@ namespace ProtocolGenerater
             return true;
         }
 
+        public static bool WriteToFile(string fileContent, string filePath, string fileName, string fileSuffix)
+        {
+            try
+            {
+                if (!Directory.Exists(filePath))
+                {
+                    Directory.CreateDirectory(filePath);
+                }
+                string fileFullName = filePath + fileName + fileSuffix;
+                FileInfo fileInfo = new FileInfo(fileFullName);
+                StreamWriter writer = fileInfo.CreateText();
+                writer.WriteLine(fileContent);
+                writer.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+            return true;
+        }
+
+
         public static string[] FindFiles(string path,string key)
         {
             //string[] files = Directory.GetFiles(path, "*.code", SearchOption.AllDirectories);
@@ -58,5 +81,57 @@ namespace ProtocolGenerater
             return files;
         }
 
+        public static string GetFileHashValue(string fileFullName)
+        {
+            //计算第一个文件的哈希值
+            var hash = System.Security.Cryptography.HashAlgorithm.Create();
+            var stream = new System.IO.FileStream(fileFullName, System.IO.FileMode.Open);
+            byte[] hashByte = hash.ComputeHash(stream);
+            stream.Close();
+            string hashValue = BitConverter.ToString(hashByte);
+            return hashValue;
+        }
+
+        public static bool CompareHashValue(string oldHash,string newHash)
+        {
+            if (string.IsNullOrEmpty(newHash))
+            {
+                return true;
+            }
+            //比较两个哈希值
+            if (oldHash == newHash)
+            {
+                //Console.WriteLine("两个文件相等");
+                return true;
+            }
+            else
+            {
+                //Console.WriteLine("两个文件不等");
+                return false;
+            }
+        }
+
+        public static string ReadFromFile(string filePath, string fileName, string fileSuffix)
+        {
+            try
+            {
+                if (!Directory.Exists(filePath))
+                {
+                    Directory.CreateDirectory(filePath);
+                }
+                string fileFullName = filePath + fileName + fileSuffix;
+                FileStream fsRead = new FileStream(fileFullName, FileMode.Open, FileAccess.Read);
+                StreamReader sr = new StreamReader(fsRead);
+                string hashValue = sr.ReadLine();
+                sr.Close();
+                fsRead.Close();
+                return hashValue;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return null;
+        }
     }
 }

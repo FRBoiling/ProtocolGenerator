@@ -68,6 +68,12 @@ namespace ProtocolGenerater
                 }
             }
 
+            if (!DataManager.GetInstance().CheckFileChange(Filename))
+            {
+                //Console.WriteLine("File no change: {0}", Filename);
+                return;
+            }
+
             GeneraterManager.GetInstance().Init(operationType);
 
             if (operationType == "all")
