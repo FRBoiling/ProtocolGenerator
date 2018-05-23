@@ -41,10 +41,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UtilityLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Bin\UtilityLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractParsePacket.cs" />
@@ -62,9 +58,9 @@
     <Compile Include="TcpSrc\TcpMgr.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClientProtocolLib\ClientProtocolLib.csproj">
+    <ProjectReference Include="..\ClientProtocolLib\ProtocolLib.csproj">
       <Project>{d9b9d5d0-0812-4024-9605-0c91994ade35}</Project>
-      <Name>ClientProtocolLib</Name>
+      <Name>ProtocolLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

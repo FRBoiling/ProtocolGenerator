@@ -22,16 +22,16 @@
     <CustomBuild Include="Client\C2G.code">
       <FileType>Document</FileType>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
     </CustomBuild>
     <CustomBuild Include="Gate\G2C.code">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
     <CustomBuild Include="MsgId\Id.code">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolGenerater --operate_type=id --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=id --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
   </ItemGroup>
@@ -41,6 +41,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ClientProtocolBuilder</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>ProtocolBuilder</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -3,12 +3,31 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
-using UtilityLib;
 
 namespace TcpLib.TcpSrc
 {
-    public class TcpMgr:Singleton<TcpMgr>
+    public class TcpMgr
     {
+        private static TcpMgr _inst;
+        private static readonly object _sysLock = new object();
+        public static TcpMgr Inst
+        {
+            get
+            {
+                if (_inst == null)
+                {
+                    lock (_sysLock)
+                    {
+                        if (_inst == null)
+                        {
+                            _inst = new TcpMgr();
+                        }
+                    }
+                }
+                return _inst;
+            }
+        }
+
         Dictionary<ushort, Socket> _listeners = new Dictionary<ushort, Socket>();
 
         public delegate void ListenHeartBeatCallBack(ushort port); //监听心跳回调
