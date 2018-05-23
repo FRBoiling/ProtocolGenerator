@@ -23,16 +23,22 @@
       <FileType>Document</FileType>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
     </CustomBuild>
     <CustomBuild Include="Gate\G2C.code">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
     <CustomBuild Include="MsgId\Id.code">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=id --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=id --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -97,6 +103,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

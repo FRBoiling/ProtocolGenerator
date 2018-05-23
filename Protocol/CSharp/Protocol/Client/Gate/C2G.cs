@@ -3,7 +3,7 @@
 // Input: C2G.proto
 
 #pragma warning disable CS1591, CS0612, CS3021, IDE1006
-namespace Protocol.Client.Gate
+namespace protocol.client.gate
 {
 
     [global::ProtoBuf.ProtoContract()]

@@ -4,12 +4,12 @@
  //     Changes to this file may cause incorrect behavior and will be lost if the code is regenerated.
  // </auto-generated>
  //------------------------------------------------------------------------------
-package Protocol.Gate.Client;
+package protocol.gate.client;
 import Protocol.MsgId.Id;
 public class G2CIdGenerater{
      public static void GenerateId(){
-          Id.getInst().SetMessage(Protocol.Gate.Client.G2C.G2CTest1.class, 0x2100001);
-          Id.getInst().SetMessage(Protocol.Gate.Client.G2C.G2CTest2.class, 0x2100002);
-          Id.getInst().SetMessage(Protocol.Gate.Client.G2C.G2CTest3.class, 0x2100003);
+          Id.getInst().SetMessage(protocol.gate.client.G2C.G2CTest1.class, 0x2100001);
+          Id.getInst().SetMessage(protocol.gate.client.G2C.G2CTest2.class, 0x2100002);
+          Id.getInst().SetMessage(protocol.gate.client.G2C.G2CTest3.class, 0x2100003);
      }
 }

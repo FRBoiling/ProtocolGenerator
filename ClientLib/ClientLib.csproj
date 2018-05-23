@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <OutputPath>..\Bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -52,6 +52,10 @@
     <Compile Include="ServerType.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProtocolLib\ProtocolLib.csproj">
+      <Project>{d9b9d5d0-0812-4024-9605-0c91994ade35}</Project>
+      <Name>ProtocolLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TcpClientLib\TcpClientLib.csproj">
       <Project>{8f4307e4-5e5c-40f3-862e-1f6801a87673}</Project>
       <Name>TcpClientLib</Name>

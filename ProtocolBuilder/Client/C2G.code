@@ -1,5 +1,5 @@
 syntax="proto2";
-package Protocol.Client.Gate;
+package protocol.client.gate;
 
 message C2GTest1 0x1200001
 {

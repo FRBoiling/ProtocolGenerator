@@ -3,7 +3,7 @@
 // Input: G2C.proto
 
 #pragma warning disable CS1591, CS0612, CS3021, IDE1006
-namespace Protocol.Gate.Client
+namespace protocol.gate.client
 {
 
     [global::ProtoBuf.ProtoContract()]

@@ -4,7 +4,7 @@
  //     Changes to this file may cause incorrect behavior and will be lost if the code is regenerated.
  // </auto-generated>
  //------------------------------------------------------------------------------
-namespace Protocol.Client.Gate
+namespace protocol.client.gate
 {
      public class IdGenerater
      {

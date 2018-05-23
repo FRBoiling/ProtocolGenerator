@@ -3,23 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protocol", "Protocol", "{08FAF6C1-1A85-4DB1-B018-3706E128F603}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{FAAD74BD-88AA-4FA0-BEDE-E9E389FA3BC5}"
-	ProjectSection(SolutionItems) = preProject
-		Protocol\CSharp\Protocol\Client\Gate\C2GIdGenerater.cs = Protocol\CSharp\Protocol\Client\Gate\C2GIdGenerater.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java", "Java", "{C16E2D6F-32F3-4B61-854E-4547D159F5CE}"
-	ProjectSection(SolutionItems) = preProject
-		Protocol\Java\Protocol\Client\Gate\C2GIdGenerater.java = Protocol\Java\Protocol\Client\Gate\C2GIdGenerater.java
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proto", "Proto", "{4705E38B-98AE-4DE6-8BCD-BAEC717FB02C}"
-	ProjectSection(SolutionItems) = preProject
-		Protocol\Proto\Protocol\Client\Gate\C2G.proto = Protocol\Proto\Protocol\Client\Gate\C2G.proto
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{B7ADC375-420F-42D4-B7C2-EDF2616F6B66}"
 	ProjectSection(SolutionItems) = preProject
 		Bin\protobuf-net.dll = Bin\protobuf-net.dll
@@ -40,6 +23,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProtocolBuilder", "ProtocolBuilder\ProtocolBuilder.vcxproj", "{039089B6-7F87-4FC6-A437-ED2191F279A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolLib", "ProtocolLib\ProtocolLib.csproj", "{D9B9D5D0-0812-4024-9605-0C91994ADE35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProtoBuffSendTest", "ProtoBuffSendTest", "{824508B9-F4D1-4367-A271-160F17C4B684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -126,9 +111,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FAAD74BD-88AA-4FA0-BEDE-E9E389FA3BC5} = {08FAF6C1-1A85-4DB1-B018-3706E128F603}
-		{C16E2D6F-32F3-4B61-854E-4547D159F5CE} = {08FAF6C1-1A85-4DB1-B018-3706E128F603}
-		{4705E38B-98AE-4DE6-8BCD-BAEC717FB02C} = {08FAF6C1-1A85-4DB1-B018-3706E128F603}
+		{0165F952-D834-4F4D-A879-DD825085B2C5} = {824508B9-F4D1-4367-A271-160F17C4B684}
+		{D0C97B29-C5AB-4ECB-A3CA-BEDE79585766} = {824508B9-F4D1-4367-A271-160F17C4B684}
+		{8F4307E4-5E5C-40F3-862E-1F6801A87673} = {824508B9-F4D1-4367-A271-160F17C4B684}
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35} = {824508B9-F4D1-4367-A271-160F17C4B684}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1985C05-B198-4932-91B7-AB5E8A769DB7}

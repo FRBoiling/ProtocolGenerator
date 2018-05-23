@@ -1,5 +1,5 @@
 syntax="proto2";
-package Protocol.Gate.Client;
+package protocol.gate.client;
 
 message G2CTest1 0x2100001
 {
