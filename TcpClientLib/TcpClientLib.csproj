@@ -57,11 +57,5 @@
     <Compile Include="TcpSrc\TcpAsyncCallBack.cs" />
     <Compile Include="TcpSrc\TcpMgr.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClientProtocolLib\ProtocolLib.csproj">
-      <Project>{d9b9d5d0-0812-4024-9605-0c91994ade35}</Project>
-      <Name>ProtocolLib</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

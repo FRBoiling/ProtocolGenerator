@@ -8,12 +8,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{FAAD74BD-88AA-4FA0-BEDE-E9E389FA3BC5}"
 	ProjectSection(SolutionItems) = preProject
 		Protocol\CSharp\Protocol\Client\Gate\C2GIdGenerater.cs = Protocol\CSharp\Protocol\Client\Gate\C2GIdGenerater.cs
-		Protocol\CSharp\Id.cs = Protocol\CSharp\Id.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java", "Java", "{C16E2D6F-32F3-4B61-854E-4547D159F5CE}"
+	ProjectSection(SolutionItems) = preProject
+		Protocol\Java\Protocol\Client\Gate\C2GIdGenerater.java = Protocol\Java\Protocol\Client\Gate\C2GIdGenerater.java
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proto", "Proto", "{4705E38B-98AE-4DE6-8BCD-BAEC717FB02C}"
+	ProjectSection(SolutionItems) = preProject
+		Protocol\Proto\Protocol\Client\Gate\C2G.proto = Protocol\Proto\Protocol\Client\Gate\C2G.proto
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{B7ADC375-420F-42D4-B7C2-EDF2616F6B66}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,8 +28,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{B7ADC375-420
 		Bin\ProtocolGenerater.exe = Bin\ProtocolGenerater.exe
 		Bin\protogen.exe = Bin\protogen.exe
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolLib", "ClientProtocolLib\ProtocolLib.csproj", "{D9B9D5D0-0812-4024-9605-0C91994ADE35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoBuffTest", "ProtoBuffTest\ProtoBuffTest.csproj", "{0165F952-D834-4F4D-A879-DD825085B2C5}"
 EndProject
@@ -36,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolBuffersGenerater", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProtocolBuilder", "ProtocolBuilder\ProtocolBuilder.vcxproj", "{039089B6-7F87-4FC6-A437-ED2191F279A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolLib", "ProtocolLib\ProtocolLib.csproj", "{D9B9D5D0-0812-4024-9605-0C91994ADE35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,18 +51,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x64.Build.0 = Debug|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x86.Build.0 = Debug|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x64.ActiveCfg = Release|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x64.Build.0 = Release|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x86.ActiveCfg = Release|Any CPU
-		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x86.Build.0 = Release|Any CPU
 		{0165F952-D834-4F4D-A879-DD825085B2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0165F952-D834-4F4D-A879-DD825085B2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0165F952-D834-4F4D-A879-DD825085B2C5}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -116,6 +109,18 @@ Global
 		{039089B6-7F87-4FC6-A437-ED2191F279A7}.Release|x64.Build.0 = Release|x64
 		{039089B6-7F87-4FC6-A437-ED2191F279A7}.Release|x86.ActiveCfg = Release|Win32
 		{039089B6-7F87-4FC6-A437-ED2191F279A7}.Release|x86.Build.0 = Release|Win32
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x64.Build.0 = Debug|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Debug|x86.Build.0 = Debug|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x64.ActiveCfg = Release|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x64.Build.0 = Release|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
