@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{321503CC-EBC1-4254-BF3A-0A2895C21D97}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProtocolGenerater</RootNamespace>
-    <AssemblyName>ProtocolGenerater</AssemblyName>
+    <RootNamespace>ProtocolBuffersGenerater</RootNamespace>
+    <AssemblyName>ProtocolBuffersGenerater</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

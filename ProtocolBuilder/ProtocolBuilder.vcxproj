@@ -40,7 +40,7 @@
     <ProjectGuid>{039089B6-7F87-4FC6-A437-ED2191F279A7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ClientProtocolBuilder</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>ProtocolBuilder</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
