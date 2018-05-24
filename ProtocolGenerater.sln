@@ -5,11 +5,7 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{B7ADC375-420F-42D4-B7C2-EDF2616F6B66}"
 	ProjectSection(SolutionItems) = preProject
-		Bin\protobuf-net.dll = Bin\protobuf-net.dll
-		Bin\protobuf-net.Reflection.dll = Bin\protobuf-net.Reflection.dll
-		Bin\protoc.exe = Bin\protoc.exe
 		Bin\ProtocolGenerater.exe = Bin\ProtocolGenerater.exe
-		Bin\protogen.exe = Bin\protogen.exe
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoBuffTest", "ProtoBuffTest\ProtoBuffTest.csproj", "{0165F952-D834-4F4D-A879-DD825085B2C5}"

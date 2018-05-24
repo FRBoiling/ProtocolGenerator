@@ -1,25 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Client">
-      <UniqueIdentifier>{eee655ae-2696-49e9-9610-69bcda05b6af}</UniqueIdentifier>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{085bb2bb-e63f-47e4-a00a-9dfc7d260ee1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Gate">
-      <UniqueIdentifier>{fb395c7a-9b48-4c31-b39e-6889721cc684}</UniqueIdentifier>
+    <Filter Include="Protocol\Client">
+      <UniqueIdentifier>{061c2cba-c567-4dd4-bcf1-6ab8b7752edf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MsgId">
-      <UniqueIdentifier>{f1aac0ed-5eb6-4c4a-9c3d-83f261176e4f}</UniqueIdentifier>
+    <Filter Include="Protocol\Server">
+      <UniqueIdentifier>{1649edcc-b852-4301-9efa-52b2e0b473e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\MsgId">
+      <UniqueIdentifier>{474ccb34-bd64-4650-a0fd-579ed7d54942}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Client\C2G.code">
-      <Filter>Client</Filter>
+    <CustomBuild Include="Protocol\Client\C2S.code">
+      <Filter>Protocol\Client</Filter>
     </CustomBuild>
-    <CustomBuild Include="MsgId\Id.code">
-      <Filter>MsgId</Filter>
+    <CustomBuild Include="Protocol\MsgId\Id.code">
+      <Filter>Protocol\MsgId</Filter>
     </CustomBuild>
-    <CustomBuild Include="Gate\G2C.code">
-      <Filter>Gate</Filter>
+    <CustomBuild Include="Protocol\Server\S2C.code">
+      <Filter>Protocol\Server</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Protocol\Client\Enum.code">
+      <Filter>Protocol\Client</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

@@ -1,0 +1,20 @@
+syntax="proto2";
+package protocol.server.client;
+
+message CSLoginInfo 
+{
+	required string UserName = 1;
+	required string Password = 2;
+}
+
+message CSLoginReq 
+{
+	required CSLoginInfo LoginInfo = 1;
+	required string teststring2 = 2;
+}
+
+message CSLoginRes 
+{
+	required uint32 result_code = 1;
+}
+

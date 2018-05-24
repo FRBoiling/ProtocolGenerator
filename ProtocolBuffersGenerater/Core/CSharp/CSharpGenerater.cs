@@ -25,7 +25,7 @@ namespace ProtocolGenerater.Core.CSharp
             CSharpClass_IdGenerater classGen = new CSharpClass_IdGenerater(data);
             classGen.Generate();
             CSharpClass_Proto protoGen = new CSharpClass_Proto(data);
-            protoGen.GenerateProto();
+            protoGen.GenerateProto_Old();
         }
     }
 }

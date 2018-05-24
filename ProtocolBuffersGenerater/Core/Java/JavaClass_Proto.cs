@@ -34,11 +34,19 @@ namespace ProtocolGenerater.Core.Java
         {
             _data = data;
             string tempPath = _data.ProtoPackageName.Replace('.', '\\');
-            m_InputfilePath = Program.OutputPath + @"Proto\" + tempPath + @"\";
             m_OutputfilePath = Program.OutputPath + @"Java\";
             m_InputfileName = data.ProtoFileKey;
             m_InpufileSuffix = ".proto";
             m_InputfileSimpleName = m_InputfileName + m_InpufileSuffix;
+
+            #region 指定路径
+            //m_InputfilePath = Program.OutputPath + @"Proto\" + tempPath + @"\";
+            #endregion
+            #region 当前路径与code同路径
+            string tempfilename = m_InputfileName + ".code";
+            m_InputfilePath = Program.Filename.Replace(tempfilename, "");
+            #endregion
+
         }
 
         public void GenerateProto()
@@ -46,7 +54,7 @@ namespace ProtocolGenerater.Core.Java
             //调用外部程序protogen.exe
             Process p = new Process();
             //p.StartInfo.FileName = "cmd.exe";
-            p.StartInfo.FileName = Application.StartupPath + @"\protoc.exe";
+            p.StartInfo.FileName = Application.StartupPath + @"\google_protoc\protoc.exe";
             //p.StartInfo.WorkingDirectory = Application.StartupPath;
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.CreateNoWindow = false;

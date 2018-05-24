@@ -10,23 +10,33 @@
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
+using System;
 using System.Text;
 
 namespace ProtocolGenerater.ProtoBuf
 {
-    public class ProtoFileGenerater: AbstractFileModel
+    public class ProtoFileGenerater : AbstractFileModel
     {
-        public string fileName=string.Empty;
+        public string fileName = string.Empty;
         public string fileSuffix = ".proto";
         Data _data = null;
 
         public ProtoFileGenerater(Data data)
         {
             _data = data;
-            string tempPath = _data.ProtoPackageName.Replace('.', '\\');
-            m_filePath = Program.OutputPath + @"Proto\" + tempPath + @"\";
             m_fileName = data.ProtoFileKey;
             m_fileSuffix = ".proto";
+
+            string tempPath = _data.ProtoPackageName.Replace('.', '\\');
+            #region 指定路径
+            //m_filePath = Program.OutputPath + @"Proto\" + tempPath + @"\";
+            #endregion
+            #region 当前路径与code同路径
+            string tempfilename = m_fileName + ".code";
+            m_filePath = Program.Filename.Replace(tempfilename, "");
+            #endregion
+       
+           // Console.WriteLine("!!!m_filePath {0} m_fileName {1} tempfilename{2}", m_filePath, m_fileName, tempfilename);
         }
 
         protected override StringBuilder GenerateClassCode()
