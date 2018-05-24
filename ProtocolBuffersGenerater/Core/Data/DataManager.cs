@@ -67,7 +67,7 @@ namespace ProtocolGenerater
 
         public bool CheckFileChange(string fileFullName)
         {
-            string filePath = @"Temp/";
+            string filePath = Program.OutputPath + @"/temp/";
             string fileName = "";
             string fileSuffix = ".tmp";
             int index = fileFullName.LastIndexOf("\\");
@@ -88,9 +88,11 @@ namespace ProtocolGenerater
                 return false;
             }
             string oldHashValue = FileUtil.ReadFromFile(filePath, fileName, fileSuffix);
+
             bool isChanged = !FileUtil.CompareHashValue(oldHashValue, newHashValue);
             if (isChanged)
             {
+                //Console.WriteLine( "{0} write success", fileFullName);
                 FileUtil.WriteToFile(newHashValue,filePath,fileName,fileSuffix);
             }
             return isChanged;

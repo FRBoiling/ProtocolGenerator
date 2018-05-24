@@ -5,7 +5,7 @@
  // </auto-generated>
  //------------------------------------------------------------------------------
 package protocol.client.gate;
-import Protocol.MsgId.Id;
+import protocol.msgId.Id;
 public class C2GIdGenerater{
      public static void GenerateId(){
           Id.getInst().SetMessage(protocol.client.gate.C2G.C2GTest1.class, 0x1200001);

@@ -21,7 +21,7 @@ namespace ProtocolGenerater.Core.Java
     public class JavaClass_Id : AbstractFileModel
     {
         JavaCodeGenerater _generater = new JavaCodeGenerater();
-        public const string msgIdPackageName = "Protocol.MsgId";
+        public const string msgIdPackageName = "protocol.msgId";
         public const string className = "Id";
 
         public JavaClass_Id()

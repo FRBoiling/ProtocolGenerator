@@ -92,9 +92,15 @@ namespace ProtocolGenerater
             return hashValue;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oldHash"></param>
+        /// <param name="newHash"></param>
+        /// <returns>true 表示不需要生成</returns>
         public static bool CompareHashValue(string oldHash,string newHash)
         {
-            if (string.IsNullOrEmpty(newHash))
+            if (string.IsNullOrEmpty(newHash)) 
             {
                 return true;
             }

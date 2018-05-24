@@ -5,7 +5,7 @@
  // </auto-generated>
  //------------------------------------------------------------------------------
 package protocol.gate.client;
-import Protocol.MsgId.Id;
+import protocol.msgId.Id;
 public class G2CIdGenerater{
      public static void GenerateId(){
           Id.getInst().SetMessage(protocol.gate.client.G2C.G2CTest1.class, 0x2100001);

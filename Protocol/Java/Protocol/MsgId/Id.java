@@ -4,7 +4,7 @@
  //     Changes to this file may cause incorrect behavior and will be lost if the code is regenerated.
  // </auto-generated>
  //------------------------------------------------------------------------------
-package Protocol.MsgId;
+package protocol.msgId;
 import java.util.HashMap;
 import com.google.protobuf.MessageLite;
 public class Id{
