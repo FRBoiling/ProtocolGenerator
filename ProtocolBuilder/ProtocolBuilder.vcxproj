@@ -41,15 +41,6 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="Protocol\Client\Enum.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)ProtocolBuffersGenerater --operate_type=all --input_path=$(ProjectDir) --output_path=$(OutputPath)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{039089B6-7F87-4FC6-A437-ED2191F279A7}</ProjectGuid>

@@ -1,4 +1,5 @@
-using Protocol.Client.Gate;
+
+using protocol.server.client;
 
 namespace ClientLib
 {
@@ -6,10 +7,14 @@ namespace ClientLib
     {
         public void Request_Test()
         {
-            C2GTest1 msg = new C2GTest1();
-            msg.Testint1 = 111;
-            msg.Teststring1 = "aaa";
-            Send(msg);
+            CSLoginInfo mLoginInfo = new CSLoginInfo();
+            mLoginInfo.UserName = "linshuhe";
+            mLoginInfo.Password = "123456";
+            CSLoginReq mReq = new CSLoginReq
+            {
+                LoginInfo = mLoginInfo
+            };
+            Send(mReq);
         }
 
         //public void Request_MSG_C2G_GET_ENCRYPTKEY()

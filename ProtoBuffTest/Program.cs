@@ -1,5 +1,4 @@
 ﻿using ClientLib;
-using Protocol.Client.Gate;
 using System;
 using System.Collections.Generic;
 using System.Linq;

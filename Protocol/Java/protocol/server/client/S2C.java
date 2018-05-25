@@ -767,20 +767,6 @@ public final class S2C {
      * <code>required .protocol.server.client.CSLoginInfo LoginInfo = 1;</code>
      */
     protocol.server.client.S2C.CSLoginInfoOrBuilder getLoginInfoOrBuilder();
-
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    boolean hasTeststring2();
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    java.lang.String getTeststring2();
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getTeststring2Bytes();
   }
   /**
    * Protobuf type {@code protocol.server.client.CSLoginReq}
@@ -795,7 +781,6 @@ public final class S2C {
       super(builder);
     }
     private CSLoginReq() {
-      teststring2_ = "";
     }
 
     @java.lang.Override
@@ -840,12 +825,6 @@ public final class S2C {
                 loginInfo_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              teststring2_ = bs;
               break;
             }
           }
@@ -894,48 +873,6 @@ public final class S2C {
       return loginInfo_ == null ? protocol.server.client.S2C.CSLoginInfo.getDefaultInstance() : loginInfo_;
     }
 
-    public static final int TESTSTRING2_FIELD_NUMBER = 2;
-    private volatile java.lang.Object teststring2_;
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    public boolean hasTeststring2() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    public java.lang.String getTeststring2() {
-      java.lang.Object ref = teststring2_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          teststring2_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string teststring2 = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTeststring2Bytes() {
-      java.lang.Object ref = teststring2_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        teststring2_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -943,10 +880,6 @@ public final class S2C {
       if (isInitialized == 0) return false;
 
       if (!hasLoginInfo()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasTeststring2()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -963,9 +896,6 @@ public final class S2C {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(1, getLoginInfo());
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, teststring2_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -977,9 +907,6 @@ public final class S2C {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLoginInfo());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, teststring2_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1002,11 +929,6 @@ public final class S2C {
         result = result && getLoginInfo()
             .equals(other.getLoginInfo());
       }
-      result = result && (hasTeststring2() == other.hasTeststring2());
-      if (hasTeststring2()) {
-        result = result && getTeststring2()
-            .equals(other.getTeststring2());
-      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1021,10 +943,6 @@ public final class S2C {
       if (hasLoginInfo()) {
         hash = (37 * hash) + LOGININFO_FIELD_NUMBER;
         hash = (53 * hash) + getLoginInfo().hashCode();
-      }
-      if (hasTeststring2()) {
-        hash = (37 * hash) + TESTSTRING2_FIELD_NUMBER;
-        hash = (53 * hash) + getTeststring2().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1162,8 +1080,6 @@ public final class S2C {
           loginInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        teststring2_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1196,10 +1112,6 @@ public final class S2C {
         } else {
           result.loginInfo_ = loginInfoBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.teststring2_ = teststring2_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1245,11 +1157,6 @@ public final class S2C {
         if (other.hasLoginInfo()) {
           mergeLoginInfo(other.getLoginInfo());
         }
-        if (other.hasTeststring2()) {
-          bitField0_ |= 0x00000002;
-          teststring2_ = other.teststring2_;
-          onChanged();
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1257,9 +1164,6 @@ public final class S2C {
 
       public final boolean isInitialized() {
         if (!hasLoginInfo()) {
-          return false;
-        }
-        if (!hasTeststring2()) {
           return false;
         }
         if (!getLoginInfo().isInitialized()) {
@@ -1403,82 +1307,6 @@ public final class S2C {
           loginInfo_ = null;
         }
         return loginInfoBuilder_;
-      }
-
-      private java.lang.Object teststring2_ = "";
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public boolean hasTeststring2() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public java.lang.String getTeststring2() {
-        java.lang.Object ref = teststring2_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            teststring2_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTeststring2Bytes() {
-        java.lang.Object ref = teststring2_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          teststring2_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public Builder setTeststring2(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        teststring2_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public Builder clearTeststring2() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        teststring2_ = getDefaultInstance().getTeststring2();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string teststring2 = 2;</code>
-       */
-      public Builder setTeststring2Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        teststring2_ = value;
-        onChanged();
-        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2042,10 +1870,9 @@ public final class S2C {
     java.lang.String[] descriptorData = {
       "\n\tS2C.proto\022\026protocol.server.client\"1\n\013C" +
       "SLoginInfo\022\020\n\010UserName\030\001 \002(\t\022\020\n\010Password" +
-      "\030\002 \002(\t\"Y\n\nCSLoginReq\0226\n\tLoginInfo\030\001 \002(\0132" +
-      "#.protocol.server.client.CSLoginInfo\022\023\n\013" +
-      "teststring2\030\002 \002(\t\"!\n\nCSLoginRes\022\023\n\013resul" +
-      "t_code\030\001 \002(\r"
+      "\030\002 \002(\t\"D\n\nCSLoginReq\0226\n\tLoginInfo\030\001 \002(\0132" +
+      "#.protocol.server.client.CSLoginInfo\"!\n\n" +
+      "CSLoginRes\022\023\n\013result_code\030\001 \002(\r"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2070,7 +1897,7 @@ public final class S2C {
     internal_static_protocol_server_client_CSLoginReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_server_client_CSLoginReq_descriptor,
-        new java.lang.String[] { "LoginInfo", "Teststring2", });
+        new java.lang.String[] { "LoginInfo", });
     internal_static_protocol_server_client_CSLoginRes_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_protocol_server_client_CSLoginRes_fieldAccessorTable = new

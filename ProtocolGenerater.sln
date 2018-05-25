@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolLib", "ProtocolLib\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProtoBuffSendTest", "ProtoBuffSendTest", "{824508B9-F4D1-4367-A271-160F17C4B684}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,18 @@ Global
 		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x64.Build.0 = Release|Any CPU
 		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9B9D5D0-0812-4024-9605-0C91994ADE35}.Release|x86.Build.0 = Release|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Debug|x64.Build.0 = Debug|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Debug|x86.Build.0 = Debug|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Release|x64.ActiveCfg = Release|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Release|x64.Build.0 = Release|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{EAEDDEB0-A642-4759-9BA0-91042E2D03F8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

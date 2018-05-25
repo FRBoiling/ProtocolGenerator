@@ -25,8 +25,8 @@ namespace ClientLib
 
         protected override void BindResponser()
         {
-            Protocol.Gate.Client.IdGenerater.GenerateId();
-            Protocol.Client.Gate.IdGenerater.GenerateId();
+            protocol.client.server.IdGenerater.GenerateId();
+            protocol.server.client.IdGenerater.GenerateId();
         }
 
         protected override void ConnectedComplete()

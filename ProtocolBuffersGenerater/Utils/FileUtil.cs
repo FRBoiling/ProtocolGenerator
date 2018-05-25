@@ -92,46 +92,65 @@ namespace ProtocolGenerater
             return hashValue;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="oldHash"></param>
-        /// <param name="newHash"></param>
-        /// <returns>true 表示不需要生成</returns>
-        public static bool CompareHashValue(string oldHash,string newHash)
-        {
-            if (string.IsNullOrEmpty(newHash)) 
-            {
-                return true;
-            }
-            //比较两个哈希值
-            if (oldHash == newHash)
-            {
-                //Console.WriteLine("两个文件相等");
-                return true;
-            }
-            else
-            {
-                //Console.WriteLine("两个文件不等");
-                return false;
-            }
-        }
+
 
         public static string ReadFromFile(string filePath, string fileName, string fileSuffix)
         {
             try
             {
+                string fileFullName = filePath + fileName + fileSuffix;
+
+                FileInfo fi = new FileInfo(fileFullName);
+                if (fi.Exists)
+                {
+                    FileStream fsRead = fi.OpenRead();
+                    StreamReader sr = new StreamReader(fsRead);
+                    string s = sr.ReadLine();
+                    sr.Close();
+                    fsRead.Close();
+                    return s;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }         
+            return null;
+        }
+
+
+
+        public static List<string> ReadLinesFromFile(string filePath, string fileName, string fileSuffix)
+        {
+            try
+            {
+                List<string> lines = new List<string>();
+
                 if (!Directory.Exists(filePath))
                 {
                     Directory.CreateDirectory(filePath);
                 }
                 string fileFullName = filePath + fileName + fileSuffix;
                 FileStream fsRead = new FileStream(fileFullName, FileMode.Open, FileAccess.Read);
+
                 StreamReader sr = new StreamReader(fsRead);
-                string hashValue = sr.ReadLine();
+                string s = "";
+                do
+                {
+                    s = sr.ReadLine();
+                    if (s != null)
+                    {
+                        lines.Add(s);
+                    }
+                } while (s != null);
+
                 sr.Close();
                 fsRead.Close();
-                return hashValue;
+                return lines;
             }
             catch (Exception e)
             {
@@ -139,5 +158,8 @@ namespace ProtocolGenerater
             }
             return null;
         }
+
+      
+
     }
 }

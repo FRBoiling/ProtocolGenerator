@@ -1,5 +1,4 @@
-﻿using Protocol.MsgId;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -65,7 +64,7 @@ namespace TcpLib
             head = new MemoryStream(sizeof(ushort) + sizeof(uint));
             ushort len = (ushort)body.Length;
             head.Write(BitConverter.GetBytes(len), 0, sizeof(ushort));
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(uint));
+            head.Write(BitConverter.GetBytes(Protocol.MsgId.Id<T>.Value), 0, sizeof(uint));
         }
 
         public override void CryptoPackPacket<T>(T msg, out MemoryStream head, out MemoryStream body)
@@ -82,7 +81,7 @@ namespace TcpLib
             ushort len = (ushort)body.Length;
             head.Write(BitConverter.GetBytes(len), 0, sizeof(ushort));
             head.Write(BitConverter.GetBytes(sourceStreamLen), 0, sizeof(ushort));
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(uint));
+            head.Write(BitConverter.GetBytes(Protocol.MsgId.Id<T>.Value), 0, sizeof(uint));
         }
 
         public override void PackPacket<T>(T msg, int uid, out MemoryStream head, out MemoryStream body)

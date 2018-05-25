@@ -50,6 +50,7 @@
     <Compile Include="Core\CSharp\CSharpCodeGenerater.cs" />
     <Compile Include="Core\CSharp\CSharpGenerater.cs" />
     <Compile Include="Core\EnumType.cs" />
+    <Compile Include="Core\GeneraterCache.cs" />
     <Compile Include="Core\Java\JavaClass_IdGenerater.cs" />
     <Compile Include="Core\Java\JavaClass_Proto.cs" />
     <Compile Include="Core\Java\JavaGenerater.cs" />

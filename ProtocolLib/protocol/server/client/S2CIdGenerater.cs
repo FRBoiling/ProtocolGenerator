@@ -4,15 +4,15 @@
  //     Changes to this file may cause incorrect behavior and will be lost if the code is regenerated.
  // </auto-generated>
  //------------------------------------------------------------------------------
-namespace Protocol.Client.Gate
+namespace protocol.server.client
 {
      public class IdGenerater
      {
           public static void GenerateId()
           {
-               Protocol.MsgId.Id<C2GTest1>.Value= 0x1200001;
-               Protocol.MsgId.Id<C2GTest2>.Value= 0x1200002;
-               Protocol.MsgId.Id<C2GTest3>.Value= 0x1200003;
+               Protocol.MsgId.Id<CSLoginInfo>.Value= 0x2100001;
+               Protocol.MsgId.Id<CSLoginReq>.Value= 0x2100002;
+               Protocol.MsgId.Id<CSLoginRes>.Value= 0x2100003;
           }
      }
 }

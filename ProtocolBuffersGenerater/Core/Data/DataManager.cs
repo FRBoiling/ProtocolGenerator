@@ -10,6 +10,7 @@
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
+using ProtocolBuffersGenerater.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,37 +66,15 @@ namespace ProtocolGenerater
             }
         }
 
-        public bool CheckFileChange(string fileFullName)
+        /// <summary>
+        /// 检查文件是否失效
+        /// </summary>
+        /// <param name="fileFullName"></param>
+        /// <returns></returns>
+        public bool CheckFilePast(string fileFullName)
         {
-            string filePath = Program.OutputPath + @"/temp/";
-            string fileName = "";
-            string fileSuffix = ".tmp";
-            int index = fileFullName.LastIndexOf("\\");
-            if (index < 0)
-            {
-                Console.WriteLine("CheckFileChange error : fileFullName format wrong .({0})", fileFullName);
-                return false;
-            }
-
-            fileName = fileFullName.Substring(index + 1);
-            index = fileName.LastIndexOf(".");
-            fileName = fileName.Substring(0, index);
-
-            string newHashValue =FileUtil.GetFileHashValue(fileFullName);
-            if (string.IsNullOrEmpty(newHashValue))
-            {
-                Console.WriteLine("CheckFileChange error : {0} is null", fileFullName);
-                return false;
-            }
-            string oldHashValue = FileUtil.ReadFromFile(filePath, fileName, fileSuffix);
-
-            bool isChanged = !FileUtil.CompareHashValue(oldHashValue, newHashValue);
-            if (isChanged)
-            {
-                //Console.WriteLine( "{0} write success", fileFullName);
-                FileUtil.WriteToFile(newHashValue,filePath,fileName,fileSuffix);
-            }
-            return isChanged;
+            GeneraterCache cache = new GeneraterCache();
+            return cache.CheckCache(fileFullName);
         }
     }
 }

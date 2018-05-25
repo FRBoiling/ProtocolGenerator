@@ -4,9 +4,15 @@
  //     Changes to this file may cause incorrect behavior and will be lost if the code is regenerated.
  // </auto-generated>
  //------------------------------------------------------------------------------
-package protocol.client.server;
-import protocol.msgId.Id;
-public class EnumIdGenerater{
-     public static void GenerateId(){
+namespace protocol.client.server
+{
+     public class IdGenerater
+     {
+          public static void GenerateId()
+          {
+               Protocol.MsgId.Id<GOODS_INFO>.Value= 0x1200001;
+               Protocol.MsgId.Id<GOODS_INFO_ARRAY>.Value= 0x1200002;
+               Protocol.MsgId.Id<C2GTest3>.Value= 0x1200003;
+          }
      }
 }

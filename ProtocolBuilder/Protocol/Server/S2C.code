@@ -10,7 +10,6 @@ message CSLoginInfo 0x2100001
 message CSLoginReq 0x2100002
 {
 	required CSLoginInfo LoginInfo = 1;
-	required string teststring2 = 2;
 }
 
 message CSLoginRes 0x2100003

@@ -10,7 +10,6 @@ message CSLoginInfo
 message CSLoginReq 
 {
 	required CSLoginInfo LoginInfo = 1;
-	required string teststring2 = 2;
 }
 
 message CSLoginRes 

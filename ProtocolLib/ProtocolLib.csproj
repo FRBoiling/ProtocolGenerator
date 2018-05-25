@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net">
-      <HintPath>..\Bin\protobuf-net.dll</HintPath>
+      <HintPath>..\Bin\net_old\ProtoGen\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client\Gate\C2G.cs" />
-    <Compile Include="Client\Gate\C2GIdGenerater.cs" />
-    <Compile Include="Gate\Client\G2C.cs" />
-    <Compile Include="Gate\Client\G2CIdGenerater.cs" />
-    <Compile Include="MsgId\Id.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="protocol\client\server\C2S.cs" />
+    <Compile Include="protocol\client\server\C2SIdGenerater.cs" />
+    <Compile Include="protocol\MsgId\Id.cs" />
+    <Compile Include="protocol\server\client\S2C.cs" />
+    <Compile Include="protocol\server\client\S2CIdGenerater.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

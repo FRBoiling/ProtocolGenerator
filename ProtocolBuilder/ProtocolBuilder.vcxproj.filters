@@ -24,8 +24,5 @@
     <CustomBuild Include="Protocol\Server\S2C.code">
       <Filter>Protocol\Server</Filter>
     </CustomBuild>
-    <CustomBuild Include="Protocol\Client\Enum.code">
-      <Filter>Protocol\Client</Filter>
-    </CustomBuild>
   </ItemGroup>
 </Project>

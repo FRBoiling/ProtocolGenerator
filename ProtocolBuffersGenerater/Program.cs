@@ -30,7 +30,7 @@ namespace ProtocolGenerater
 
             foreach (string arg in args)
             {
-                //Console.WriteLine(">>{0} ", arg);
+                //Console.WriteLine(">>>{0} ", arg);
                 string lhs = arg, rhs = "";
                 int index = arg.IndexOf('=');
                 if (index > 0)
@@ -68,7 +68,7 @@ namespace ProtocolGenerater
                 }
             }
 
-            if (!DataManager.GetInstance().CheckFileChange(Filename))
+            if (!DataManager.GetInstance().CheckFilePast(Filename))
             {
                 //Console.WriteLine("File no change: {0}", Filename);
                 return;
