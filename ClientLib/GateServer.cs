@@ -27,6 +27,7 @@ namespace ClientLib
         {
             protocol.client.server.IdGenerater.GenerateId();
             protocol.server.client.IdGenerater.GenerateId();
+            protocol.gate.global.IdGenerater.GenerateId();
         }
 
         protected override void ConnectedComplete()

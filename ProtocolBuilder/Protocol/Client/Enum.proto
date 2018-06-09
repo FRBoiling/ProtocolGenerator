@@ -1,8 +1,0 @@
-syntax="proto2";
-package protocol.client.server;
-enum EnmCmdID
-{
-	CS_LOGIN_REQ=10001;
-	CS_LOGIN_RES=10002;
-}
-

@@ -1,0 +1,24 @@
+syntax = "proto2";
+package protocol.server.register;
+
+message MSG_REQ_Server_Register 
+{
+	required int32 serverType= 1;
+	optional int32 groupId = 2;
+	optional int32 subId = 3;
+}
+
+message MSG_RES_Server_Register 
+{
+	required int32 serverType= 1;
+	optional int32 groupId = 2;
+	optional int32 subId = 3;
+	required uint32 result =4;
+}
+
+message ConnectInfo 
+{
+	required int32 port = 1;
+	required string ip = 2;
+}
+

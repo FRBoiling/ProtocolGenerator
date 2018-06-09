@@ -1,0 +1,7 @@
+syntax = "proto2";
+package protocol.gate.global;
+
+message MSG_G2GM_HEARTBEAT 
+{
+}
+

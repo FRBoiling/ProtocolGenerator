@@ -1,4 +1,5 @@
 
+using protocol.gate.global;
 using protocol.server.client;
 
 namespace ClientLib
@@ -7,13 +8,16 @@ namespace ClientLib
     {
         public void Request_Test()
         {
-            CSLoginInfo mLoginInfo = new CSLoginInfo();
-            mLoginInfo.UserName = "linshuhe";
-            mLoginInfo.Password = "123456";
-            CSLoginReq mReq = new CSLoginReq
-            {
-                LoginInfo = mLoginInfo
-            };
+            //CSLoginInfo mLoginInfo = new CSLoginInfo();
+            //mLoginInfo.UserName = "linshuhe";
+            //mLoginInfo.Password = "123456";
+            //CSLoginReq mReq = new CSLoginReq
+            //{
+            //    LoginInfo = mLoginInfo
+            //};
+
+            MSG_G2GM_REQ_Register mReq = new MSG_G2GM_REQ_Register();
+            mReq.id = 111;
             Send(mReq);
         }
 

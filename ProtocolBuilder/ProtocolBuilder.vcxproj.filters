@@ -13,6 +13,12 @@
     <Filter Include="Protocol\MsgId">
       <UniqueIdentifier>{474ccb34-bd64-4650-a0fd-579ed7d54942}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Protocol\Global">
+      <UniqueIdentifier>{982e926e-0cbb-4b2c-b7f0-6f7bb9177b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Gate">
+      <UniqueIdentifier>{2326598a-5805-4029-8bb2-4b0b385e8279}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Protocol\Client\C2S.code">
@@ -21,7 +27,9 @@
     <CustomBuild Include="Protocol\MsgId\Id.code">
       <Filter>Protocol\MsgId</Filter>
     </CustomBuild>
-    <CustomBuild Include="Protocol\Server\S2C.code">
+    <CustomBuild Include="Protocol\Global\GM2G.code" />
+    <CustomBuild Include="Protocol\Gate\G2GM.code" />
+    <CustomBuild Include="ServerRegister.code">
       <Filter>Protocol\Server</Filter>
     </CustomBuild>
   </ItemGroup>

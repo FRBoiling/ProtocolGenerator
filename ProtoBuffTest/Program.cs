@@ -15,7 +15,7 @@ namespace ProtoBuffTest
         static void Main(string[] args)
         {
             string ip = "127.0.0.1";
-            ushort port = 8201;
+            ushort port = 20011;
             API= new GateServer();
             try
             {
