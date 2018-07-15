@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 /************************************************************************ 
 * 项目名称 :  UnitTest   
 * 类 名 称 :  UnitTest
@@ -110,6 +111,31 @@ namespace UnitTest
                 Console.WriteLine(e.Message);
             }
             return null;
+        }
+
+        [TestMethod]
+        public void IsRightId()
+        {
+            string str = "0xFF0001";
+            string head = str.Substring(0, 2);
+            if (!head .Equals("0x"))
+            {
+                return;
+            }
+            else
+            {
+                string body = str.Substring(2);
+                //32位去掉符号位 31位。索性取7位16进制
+                if (body.Length >7 )
+                {
+                    return;
+                }
+                const string PATTERN = @"[A-Fa-f0-9]+$";
+                bool bo = System.Text.RegularExpressions.Regex.IsMatch(str, PATTERN);
+                
+            }
+           
+
         }
     }
 }

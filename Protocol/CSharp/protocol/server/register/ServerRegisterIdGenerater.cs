@@ -11,7 +11,7 @@ namespace protocol.server.register
           public static void GenerateId()
           {
                Protocol.MsgId.Id<MSG_REQ_Server_Register>.Value= 0xFF0001;
-               Protocol.MsgId.Id<MSG_RES_Server_Register>.Value= 0xFF0002;
+               Protocol.MsgId.Id<MSG_RES_Server_Register>.Value= 0xFF000`;
                Protocol.MsgId.Id<ConnectInfo>.Value= 0xFF0003;
           }
      }
