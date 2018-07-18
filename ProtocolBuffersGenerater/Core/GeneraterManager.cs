@@ -45,7 +45,7 @@ namespace ProtocolGenerater
                     Add(GeneraterType.Java, new JavaGenerater());
                     //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
                     break;
-                case "Java":
+                case "java":
                     Add(GeneraterType.Proto, new ProtoGenerater());
                     Add(GeneraterType.Java, new JavaGenerater());
                     //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
