@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProtoBuffSendTest", "ProtoB
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProtocolBuilder", "ProtocolBuilder\ProtocolBuilder\ProtocolBuilder.vcxproj", "{D1F92E0F-674C-493E-8970-A36CD9A401D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{F3050739-E614-48AE-A617-48EEC8ACC899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,18 @@ Global
 		{D1F92E0F-674C-493E-8970-A36CD9A401D1}.Release|x64.Build.0 = Release|x64
 		{D1F92E0F-674C-493E-8970-A36CD9A401D1}.Release|x86.ActiveCfg = Release|Win32
 		{D1F92E0F-674C-493E-8970-A36CD9A401D1}.Release|x86.Build.0 = Release|Win32
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Debug|x64.Build.0 = Debug|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Debug|x86.Build.0 = Debug|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Release|x64.ActiveCfg = Release|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Release|x64.Build.0 = Release|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Release|x86.ActiveCfg = Release|Any CPU
+		{F3050739-E614-48AE-A617-48EEC8ACC899}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
