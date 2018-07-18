@@ -1,0 +1,7 @@
+syntax = "proto2";
+package protocol.manager.global;
+
+message MSG_M2GM_HEARTBEAT 
+{
+}
+

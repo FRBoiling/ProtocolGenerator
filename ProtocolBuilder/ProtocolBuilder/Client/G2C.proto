@@ -1,0 +1,10 @@
+syntax = "proto2";
+package protocol.client.g2c;
+
+message MSG_GC_USER_LOGIN 
+{
+	required int32 result = 1;
+	required string accountName = 2;
+	optional int32 token=3;
+}
+

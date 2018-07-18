@@ -1,0 +1,7 @@
+syntax = "proto2";
+package protocol.zone.global;
+
+message MSG_Z2GM_HEARTBEAT 
+{
+}
+
