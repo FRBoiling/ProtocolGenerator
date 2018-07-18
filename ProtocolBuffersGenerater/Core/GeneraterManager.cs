@@ -45,6 +45,16 @@ namespace ProtocolGenerater
                     Add(GeneraterType.Java, new JavaGenerater());
                     //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
                     break;
+                case "Java":
+                    Add(GeneraterType.Proto, new ProtoGenerater());
+                    Add(GeneraterType.Java, new JavaGenerater());
+                    //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
+                    break;
+                case "CSharp":
+                    Add(GeneraterType.Proto, new ProtoGenerater());
+                    Add(GeneraterType.CSharp, new CSharpGenerater());
+                    //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
+                    break;
                 case "default":
                     Add(GeneraterType.Proto,new ProtoGenerater());
                     Add(GeneraterType.CSharp, new CSharpGenerater());

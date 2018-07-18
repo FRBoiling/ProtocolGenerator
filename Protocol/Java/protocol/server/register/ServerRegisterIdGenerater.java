@@ -9,7 +9,7 @@ import protocol.msgId.Id;
 public class ServerRegisterIdGenerater{
      public static void GenerateId(){
           Id.getInst().SetMessage(protocol.server.register.ServerRegister.MSG_REQ_Server_Register.class, 0xFF0001);
-          Id.getInst().SetMessage(protocol.server.register.ServerRegister.MSG_RES_Server_Register.class, 0xFF0002);
+          Id.getInst().SetMessage(protocol.server.register.ServerRegister.MSG_RES_Server_Register.class, 0xFF000`);
           Id.getInst().SetMessage(protocol.server.register.ServerRegister.ConnectInfo.class, 0xFF0003);
      }
 }

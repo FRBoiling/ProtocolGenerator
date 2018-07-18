@@ -10,6 +10,7 @@
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
+using ProtocolBuffersGenerater.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -79,8 +80,40 @@ namespace ProtocolGenerater
                         {
                             if (arr[0] == "message")
                             {
-                                data.DicName2Id.Add(arr[1], arr[2]);
-                                data.DicId2Name.Add(arr[2], arr[1]);
+                                if (data.DicName2Id.ContainsKey(arr[1]))
+                                {
+                                    Console.WriteLine("protobuf data got an error at line ->{0}<- : repeat name {1}", line,arr[1]);
+                                    return null;
+                                }
+                                else
+                                {
+                                    if (data.DicId2Name.ContainsKey(arr[2]))
+                                    {
+                                        Console.WriteLine("protobuf data got an error at line ->{0}<- : repeat id {1}", line,arr[2]);
+                                        return null;
+                                    }
+                                    else
+                                    {
+                                        if (StringUtil.IsHexadecimalId(arr[2]))
+                                        {
+                                            data.DicId2Name.Add(arr[2], arr[1]);
+                                        }
+                                        else
+                                        {
+                                            int id;
+                                            if (int.TryParse(arr[2], out id))
+                                            {
+                                                data.DicId2Name.Add(arr[2], arr[1]);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("protobuf data got an error at line ->{0}<- : wrong id {1}", line, arr[2]);
+                                                return null;
+                                            }
+                                        }
+                                        data.DicName2Id.Add(arr[1], arr[2]);
+                                    }
+                                }
                                 strProtoline = strProtoline.Replace(arr[2], "");
                                 data.ProtoCode.Append(Environment.NewLine);
                                 data.ProtoCode.Append(strProtoline);

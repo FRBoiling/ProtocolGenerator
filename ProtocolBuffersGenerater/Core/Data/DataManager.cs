@@ -56,6 +56,11 @@ namespace ProtocolGenerater
         public void Load(string fileName)
         {
             Data data = DataParser.ParseCodeFile(fileName);
+            if (data == null)
+            {
+                Console.WriteLine("please check your file :{0}", fileName);
+                return;
+            }
             if (_dataDic.ContainsKey(data.ProtoFileKey))
             {
                 Console.WriteLine("Load an repeated file {0}",data.ProtoFileKey);
