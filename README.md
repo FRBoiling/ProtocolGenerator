@@ -25,6 +25,7 @@ protobuf批量管理自动生成方案（2018/04/20）
 
 而，默认版本syntax="proto2" ，Google/protobuf并没有提供c#版，所以proto2需要通过第三方的protobuf-net https://github.com/mgravell/protobuf-net 来支持c#，所以，我用protogen.exe来生成代码
 
+截止目前为止，只实现了java和c#，c++的后续跟进
 
 具体需求和实现思路
 --------------------------------------
