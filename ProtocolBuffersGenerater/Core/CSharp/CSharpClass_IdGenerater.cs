@@ -27,6 +27,7 @@ namespace ProtocolGenerater.Core.CSharp
             m_filePath = Program.OutputPath + @"CSharp\"+ tempPath+@"\";
             m_fileName = _data.ProtoFileKey;
             m_fileSuffix = "IdGenerater.cs";
+            className = m_fileName + className;
         }
 
         private StringBuilder GenerateIdKey(string key)
