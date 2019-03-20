@@ -10,6 +10,7 @@
 ************************************************************************ 
  * Copyright @ BoilingBlood 2018. All rights reserved. 
 ************************************************************************/
+using ProtocolBuffersGenerater.Core.Lua;
 using ProtocolGenerater.Core;
 using ProtocolGenerater.Core.CSharp;
 using ProtocolGenerater.Core.Java;
@@ -43,23 +44,23 @@ namespace ProtocolGenerater
                     Add(GeneraterType.Proto,new ProtoGenerater());
                     Add(GeneraterType.CSharp, new CSharpGenerater());
                     Add(GeneraterType.Java, new JavaGenerater());
-                    //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
+                    Add(GeneraterType.Lua,new LuaGenerater());
                     break;
                 case "java":
                     Add(GeneraterType.Proto, new ProtoGenerater());
                     Add(GeneraterType.Java, new JavaGenerater());
-                    //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
                     break;
                 case "CSharp":
                     Add(GeneraterType.Proto, new ProtoGenerater());
                     Add(GeneraterType.CSharp, new CSharpGenerater());
-                    //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
+                    break;
+                case "Lua":
+                    Add(GeneraterType.Proto, new ProtoGenerater());
+                    Add(GeneraterType.Lua,new LuaGenerater());
                     break;
                 case "default":
                     Add(GeneraterType.Proto,new ProtoGenerater());
                     Add(GeneraterType.CSharp, new CSharpGenerater());
-                    Add(GeneraterType.Java, new JavaGenerater());
-                    //Add(GeneraterType.CPlusPlus,new CSharpGenerater());
                     break;
                 case "id":
                     Add(GeneraterType.CSharp, new CSharpGenerater());

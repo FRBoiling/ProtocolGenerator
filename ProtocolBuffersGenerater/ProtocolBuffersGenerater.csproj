@@ -72,6 +72,8 @@
     <Compile Include="Core\Java\JavaGenerater.cs" />
     <Compile Include="Core\Java\JavaClass_Id.cs" />
     <Compile Include="Core\Java\JavaCodeGenerater.cs" />
+    <Compile Include="Core\Lua\LuaGenerater.cs" />
+    <Compile Include="Core\Lua\Lua_Proto.cs" />
     <Compile Include="Utils\FileUtil.cs" />
     <Compile Include="Core\ICodeGenerater.cs" />
     <Compile Include="Core\Data\Data.cs" />
