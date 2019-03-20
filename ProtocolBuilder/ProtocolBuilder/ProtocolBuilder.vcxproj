@@ -149,28 +149,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Gate\G2GM.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Global\GM2G.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-    </CustomBuild>
     <CustomBuild Include="MsgId\Id.code">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=id --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
@@ -186,110 +164,14 @@
   <ItemGroup>
     <CustomBuild Include="Server\ServerRegister.code">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="Global\GM2M.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Manager\M2GM.code">
-      <FileType>Document</FileType>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="Global\GM2Z.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Zone\Z2GM.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="Global\GM2R.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Relation\R2GM.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="Client\C2G.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Client\G2C.code">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).proto</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=java --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ProtocolBuffers\Generater --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)..\Protocol\ --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

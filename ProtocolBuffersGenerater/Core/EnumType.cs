@@ -23,6 +23,7 @@ namespace ProtocolGenerater.Core
         Proto,
         CSharp,
         Java,
+        Lua,
         CPlusPlus
     }
 
