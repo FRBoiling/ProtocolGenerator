@@ -1,7 +1,0 @@
-syntax = "proto2";
-package protocol.gate.global;
-
-message MSG_G2GM_HEARTBEAT 0x1f0001
-{
-}
-

@@ -1,7 +1,0 @@
-syntax = "proto2";
-package protocol.relation.global;
-
-message MSG_R2GM_HEARTBEAT 
-{
-}
-

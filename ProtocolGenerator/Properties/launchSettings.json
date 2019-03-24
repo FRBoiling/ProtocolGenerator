@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProtocolGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "--operate_type=CSharp --input_path=C:\\Users\\WanXin\\source\\repos\\ProtocolGenerator\\ProtocolBuilder\\ --output_path=C:\\Users\\WanXin\\source\\repos\\ProtocolGenerator\\Cache\\ --filename=C:\\Users\\WanXin\\source\\repos\\ProtocolGenerator\\ProtocolBuilder\\Server\\ServerRegister.code"
+    }
+  }
+}

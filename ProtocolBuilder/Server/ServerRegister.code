@@ -1,0 +1,35 @@
+syntax = "proto3";
+package Message.Server.Register;
+
+message Server_Tag
+{
+	 int32 serverType= 1;  
+	 int32 groupId = 2;
+	 int32 subId = 3;
+}
+
+message MSG_Server_Register 0xff0001
+{
+	 Server_Tag tag =1;
+}
+
+message MSG_Server_Register_Return 0xff0002
+{
+	 uint32 Result =1;
+	 Server_Tag tag =2;
+}
+
+message Connect_Info
+{
+	 int32 port = 1;
+	 string ip = 2;
+}
+
+message MSG_Server_Connect_Command 0xff0004
+{
+	 Server_Tag tag = 1;
+	 Connect_Info info= 2;
+	 int32 connectType = 4;
+	 int32 connectType1 = 5;
+}
+

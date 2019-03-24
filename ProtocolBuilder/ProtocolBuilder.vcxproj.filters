@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="IdGenerator">
+      <UniqueIdentifier>{afb189d0-be59-481b-a74f-a1efa7f611de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{be7a6a9c-8bf5-4f6c-8168-380f48c22f94}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="IdGenerator\Id.code">
+      <Filter>IdGenerator</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Server\ServerRegister.code">
+      <Filter>Server</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
