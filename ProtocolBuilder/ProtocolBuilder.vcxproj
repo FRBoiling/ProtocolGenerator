@@ -21,16 +21,16 @@
   <ItemGroup>
     <CustomBuild Include="IdGenerator\Id.code">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=CSharpId --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=CSharpId --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=id --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=id --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
     <CustomBuild Include="Server\ServerRegister.code">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=CSharp --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=CSharp --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Output\net35\ProtocolGenerator --operate_type=all --input_path=$(ProjectDir) --output_path=$(SolutionDir)Cache\ --filename=%(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
   </ItemGroup>

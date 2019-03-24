@@ -44,7 +44,7 @@ namespace ProtocolGenerator
                     Add(GeneratorType.Proto,new ProtoGenerator());
                     Add(GeneratorType.CSharp, new CSharpGenerator());
                     Add(GeneratorType.Java, new JavaGenerator());
-                    Add(GeneratorType.Lua,new LuaGenerator());
+                    //Add(GeneratorType.Lua,new LuaGenerator());
                     break;
                 case "java":
                     Add(GeneratorType.Proto, new ProtoGenerator());
@@ -66,6 +66,10 @@ namespace ProtocolGenerator
                     Add(GeneratorType.CSharp, new CSharpGenerator());
                     break;
                 case "JavaId":
+                    Add(GeneratorType.Java, new JavaGenerator());
+                    break;
+                case "id":
+                    Add(GeneratorType.CSharp, new CSharpGenerator());
                     Add(GeneratorType.Java, new JavaGenerator());
                     break;
                 default:
