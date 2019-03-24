@@ -4,15 +4,10 @@
  //     Changes to this file may cause incorrect behavior and will be lost if the code is regenerated.
  // </auto-generated>
  //------------------------------------------------------------------------------
-namespace Message.Server.Register
+namespace Message.IdGenerator
 {
-     public class ServerRegisterIdGenerator
+     public static class Id<T>
      {
-          public static void GenerateId()
-          {
-               Message.IdGenerator.Id<MSG_Server_Register>.Value= 0xff0001;
-               Message.IdGenerator.Id<MSG_Server_Register_Return>.Value= 0xff0002;
-               Message.IdGenerator.Id<MSG_Server_Connect_Command>.Value= 0xff0004;
-          }
+          public static uint Value;
      }
 }

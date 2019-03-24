@@ -129,7 +129,6 @@ namespace ProtocolBuffersGenerator.Core
             {
                 return false;
             }
-            return false;
         }
 
     }

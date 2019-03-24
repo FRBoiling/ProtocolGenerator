@@ -30,10 +30,10 @@
     <TargetFrameworks>netstandard1.0</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net35|AnyCPU'">
-    <OutputPath>..\Bin</OutputPath>
+    <OutputPath>..\Output</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net35|AnyCPU'">
-    <OutputPath>..\Bin</OutputPath>
+    <OutputPath>..\Output</OutputPath>
   </PropertyGroup>
 
 </Project>

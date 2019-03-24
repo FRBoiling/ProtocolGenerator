@@ -30,7 +30,7 @@ namespace ProtocolGenerator
             }
 
             int index = fileFullName.LastIndexOf("\\");
-            if (index<0)
+            if (index < 0)
             {
                 Console.WriteLine("ParseCodeFile error : fileFullName format wrong .({0})", fileFullName);
                 return null;
@@ -48,11 +48,8 @@ namespace ProtocolGenerator
                 {
                     strProtoline = line;
 
-                    data.ProtoCode.Append(strProtoline);
-                    data.ProtoCode.Append(Environment.NewLine);
-
                     List<string> formatArr = strProtoline.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).ToList();
-                    if (formatArr.Count>1)
+                    if (formatArr.Count > 1)
                     {
                         data.ProtoPackageName = formatArr[1].Replace(";", "");
                     }
@@ -60,65 +57,67 @@ namespace ProtocolGenerator
                     {
                         Console.WriteLine("please check the package name!");
                     }
+
+                    strProtoline = string.Format("{0} {1};", formatArr[0], data.ProtoPackageName);
+                    data.ProtoCode.Append(strProtoline);
+                    data.ProtoCode.Append(Environment.NewLine);
                 }
                 else if (line.StartsWith("message"))
                 {
                     strProtoline = line;
                     List<string> formatArr = strProtoline.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).ToList();
-                    if (formatArr.Count > 2)
+
+                    if (formatArr.Count >1)
                     {
-                        if (formatArr.Count >= 2)
+                        if (formatArr[0] == "message")
                         {
-                            if (formatArr[0] == "message")
+                            if (data.DicName2Id.ContainsKey(formatArr[1]))
                             {
-                                if (data.DicName2Id.ContainsKey(formatArr[1]))
-                                {
-                                    Console.WriteLine("protobuf data got an error at line ->{0}<- : repeat name {1}", line, formatArr[1]);
-                                    return null;
-                                }
-                                else
-                                {
-                                    if (formatArr.Count >2)
-                                    {
-                                        if (StringUtil.IsHexadecimalId(formatArr[2]))
-                                        {
-                                            if (data.DicId2Name.ContainsKey(formatArr[2]))
-                                            {
-                                                Console.WriteLine("protobuf data got an error at line ->{0}<- : repeat id {1}", line, formatArr[2]);
-                                                return null;
-                                            }
-                                            else
-                                            {
-                                                data.DicId2Name.Add(formatArr[2], formatArr[1]);
-                                                data.DicName2Id.Add(formatArr[1], formatArr[2]);
-                                            }
-                                        }
-                                        else
-                                        {
-                                            int id;
-                                            if (int.TryParse(formatArr[2], out id))
-                                            {
-                                                data.DicId2Name.Add(formatArr[2], formatArr[1]);
-                                                data.DicName2Id.Add(formatArr[1], formatArr[2]);
-                                            }
-                                            else
-                                            {
-                                                Console.WriteLine("protobuf data got an error at line ->{0}<- : wrong id {1}", line, formatArr[2]);
-                                                return null;
-                                            }
-                                        }
-                                    }
-                                    strProtoline = formatArr[0] + " " + formatArr[1];
-                                    data.ProtoCode.Append(Environment.NewLine);
-                                    data.ProtoCode.Append(strProtoline);
-                                    data.ProtoCode.Append(Environment.NewLine);
-                                }
+                                Console.WriteLine("protobuf data got an error at line ->{0}<- : repeat name {1}", line, formatArr[1]);
+                                return null;
                             }
                             else
                             {
-                                Console.WriteLine("protobuf data got an error format {0}",line);
-                                return null;
+                                if (formatArr.Count > 2)
+                                {
+                                    if (StringUtil.IsHexadecimalId(formatArr[2]))
+                                    {
+                                        if (data.DicId2Name.ContainsKey(formatArr[2]))
+                                        {
+                                            Console.WriteLine("protobuf data got an error at line ->{0}<- : repeat id {1}", line, formatArr[2]);
+                                            return null;
+                                        }
+                                        else
+                                        {
+                                            data.DicId2Name.Add(formatArr[2], formatArr[1]);
+                                            data.DicName2Id.Add(formatArr[1], formatArr[2]);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        int id;
+                                        if (int.TryParse(formatArr[2], out id))
+                                        {
+                                            data.DicId2Name.Add(formatArr[2], formatArr[1]);
+                                            data.DicName2Id.Add(formatArr[1], formatArr[2]);
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("protobuf data got an error at line ->{0}<- : wrong id {1}", line, formatArr[2]);
+                                            return null;
+                                        }
+                                    }
+                                }
+                                strProtoline = formatArr[0] + " " + formatArr[1];
+                                data.ProtoCode.Append(Environment.NewLine);
+                                data.ProtoCode.Append(strProtoline);
+                                data.ProtoCode.Append(Environment.NewLine);
                             }
+                        }
+                        else
+                        {
+                            Console.WriteLine("protobuf data got an error format {0}", line);
+                            return null;
                         }
                     }
                 }
@@ -129,7 +128,7 @@ namespace ProtocolGenerator
                 else
                 {
                     strProtoline = line;
-                
+
                     int tmpIndex = strProtoline.IndexOf("//");
                     if (tmpIndex == -1)
                     {
@@ -138,7 +137,7 @@ namespace ProtocolGenerator
                     {
                         strProtoline = strProtoline.Substring(0, tmpIndex);
                     }
-                    if (string.IsNullOrEmpty(strProtoline) )
+                    if (string.IsNullOrEmpty(strProtoline))
                     {
                     }
                     else
