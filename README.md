@@ -71,5 +71,6 @@ A2BTest为协议名msgName， 0xff00001为协议编号msgId，testInt为int32类
 
 测试例子
 --------------------------------------
-项目例子主要用c#实现，用到谷歌的protobuf源码：https://github.com/protocolbuffers/protobuf/releases/download/v3.6.0/protobuf-csharp-3.6.0.zip 
+项目例子主要用c#实现，用到谷歌的protobuf源码：https://github.com/protocolbuffers/protobuf/releases/download/v3.6.0/protobuf-csharp-3.6.0.zip
+
 protobuf-csharp-3.6.0官方默认为.net4.x，但是，我这里出于unity客户端版本原因，仅支持到.net3.5。所以我选择自己编译.net35的dll。Google.Protobuf的net35项目，在子目录Google.Protobuf下面
