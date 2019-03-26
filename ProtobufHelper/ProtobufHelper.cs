@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf;
+using System;
 using System.IO;
 
 namespace ProtobufHelper
@@ -11,22 +12,22 @@ namespace ProtobufHelper
         /// <typeparam name="T"></typeparam>
         /// <param name="message"></param>
         /// <param name="stream"></param>
-        public static void ToStream<T>(T message, MemoryStream stream) where T : Google.Protobuf.IMessage
+        public static void Serialize<T>(T message, MemoryStream outStream) where T : Google.Protobuf.IMessage
         {
-            message.WriteTo(stream);
+            message.WriteTo(outStream);
         }
 
         /// <summary>
         /// 反序列化
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="message"></param>
-        /// <param name="stream"></param>
+        /// <param name="inStream"></param>
         /// <returns></returns>
-        public static T FromStream<T>(T message, MemoryStream stream) where T : Google.Protobuf.IMessage
+        public static T Deserialize<T>(MemoryStream inStream) where T : Google.Protobuf.IMessage
         {
-            message.MergeFrom(stream.GetBuffer(), (int)stream.Position, (int)stream.Length);
-            return message;
+            T msg = Activator.CreateInstance<T>();
+            msg.MergeFrom(inStream.GetBuffer(), (int)inStream.Position, (int)inStream.Length);
+            return msg;
         }
     }
 }

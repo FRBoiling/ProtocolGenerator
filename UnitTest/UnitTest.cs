@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using Google.Protobuf;
+﻿using System.IO;
 using Message.Server.Register;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -19,7 +17,7 @@ namespace UnitTest
             fromMsg.Tag.ServerType = 2;
 
             MemoryStream outputstream = new MemoryStream();
-            ProtobufHelper.ProtobufHelper.ToStream(fromMsg, outputstream);
+            ProtobufHelper.ProtobufHelper.Serialize(fromMsg, outputstream);
 
             outputstream.Seek(0, SeekOrigin.Begin);
 
@@ -36,13 +34,13 @@ namespace UnitTest
             fromMsg.Tag.ServerType = 2;
 
             MemoryStream outputstream = new MemoryStream();
-            ProtobufHelper.ProtobufHelper.ToStream(fromMsg, outputstream);
+            ProtobufHelper.ProtobufHelper.Serialize(fromMsg,outputstream);
 
             outputstream.Seek(0, SeekOrigin.Begin);
             //MSG_Server_Register toMsg = MSG_Server_Register.Parser.ParseFrom(outputstream);
 
             MSG_Server_Register toMsg = new MSG_Server_Register();
-            ProtobufHelper.ProtobufHelper.FromStream(toMsg, outputstream);
+            toMsg =ProtobufHelper.ProtobufHelper.Deserialize<MSG_Server_Register>(outputstream);
         }
 
   
