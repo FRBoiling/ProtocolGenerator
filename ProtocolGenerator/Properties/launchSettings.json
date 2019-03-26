@@ -2,7 +2,7 @@
   "profiles": {
     "ProtocolGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "--operate_type=CSharp --input_path=D:\\GitHub\\ProtocolGenerator\\ProtocolBuilder\\ --output_path=D:\\GitHub\\ProtocolGenerator\\Cache\\ --filename=D:\\GitHub\\ProtocolGenerator\\ProtocolBuilder\\Server\\ServerRegister.code"
+      "commandLineArgs": "--operate_type=CSharp --input_path=D:\\GitHub\\ProtocolGenerator\\ProtocolBuilder --output_path=D:\\GitHub\\ProtocolGenerator\\Cache\\ --filename=D:\\GitHub\\ProtocolGenerator\\ProtocolBuilder\\Server\\ServerRegister.code"
     }
   }
 }

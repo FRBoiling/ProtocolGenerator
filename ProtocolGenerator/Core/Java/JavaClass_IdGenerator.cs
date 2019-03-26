@@ -24,7 +24,7 @@ namespace ProtocolGenerator.Core.Java
         {
             _data = data;
             string tempPath = _data.ProtoPackageName.Replace('.', '\\');
-            m_filePath = Program.OutputPath + @"Java\" + tempPath + @"\";
+            m_filePath = Program.OutputPath + @"\Java\" + tempPath + @"\";
             m_fileName = _data.ProtoFileKey;
             m_fileSuffix = "IdGenerator.java";
             className = m_fileName + className;

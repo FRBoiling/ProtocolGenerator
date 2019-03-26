@@ -24,7 +24,7 @@ namespace ProtocolGenerator.Core.CSharp
         {
             _data = data;
             string tempPath = _data.ProtoPackageName.Replace('.', '\\');
-            m_filePath = Program.OutputPath + @"CSharp\"+ tempPath+@"\";
+            m_filePath = Program.OutputPath + @"\CSharp\"+ tempPath+@"\";
             m_fileName = _data.ProtoFileKey;
             m_fileSuffix = "IdGenerator.cs";
             className = m_fileName + className;

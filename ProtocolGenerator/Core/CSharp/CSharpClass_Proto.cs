@@ -30,7 +30,7 @@ namespace ProtocolGenerator.Core.CSharp
         {
             _data = data;
             string tempPath = _data.ProtoPackageName.Replace('.', '\\');
-            m_OutputfilePath = Program.OutputPath + @"CSharp\" + tempPath + @"\";
+            m_OutputfilePath = Program.OutputPath + @"\CSharp\" + tempPath + @"\";
             m_InputfileName = data.ProtoFileKey;
             m_InpufileSuffix = ".proto";
             m_InputfileSimpleName = m_InputfileName + m_InpufileSuffix;

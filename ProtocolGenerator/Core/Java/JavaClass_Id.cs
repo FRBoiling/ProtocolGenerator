@@ -24,7 +24,7 @@ namespace ProtocolGenerator.Core.Java
         public JavaClass_Id()
         {
             string tempPath = msgIdPackageName.Replace('.', '\\');
-            m_filePath = Program.OutputPath + @"Java\" + tempPath + @"\";
+            m_filePath = Program.OutputPath + @"\Java\" + tempPath + @"\";
             m_fileName = "Id";
             m_fileSuffix = ".java";
         }

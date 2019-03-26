@@ -24,7 +24,7 @@ namespace ProtocolGenerator.Core.CSharp
         public CSharpClass_Id()
         {
             string tempPath = msgIdPackageName.Replace('.', '\\');
-            m_filePath = Program.OutputPath + @"CSharp\"+ tempPath+@"\";
+            m_filePath = Program.OutputPath + @"\CSharp\"+ tempPath+@"\";
             m_fileName = "Id";
             m_fileSuffix = ".cs";
         }
